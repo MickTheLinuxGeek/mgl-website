@@ -1,0 +1,183 @@
+{{ define "main" }}
+<main class="max-w-7xl mx-auto container-padding">
+
+    <!-- 1. Hero Section -->
+    <section id="about" class="pt-16 pb-20 md:pt-24 md:pb-28 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">
+            Hi, I'm a Hobbyist <span class="text-primary">Developer</span> & <span class="text-accent">Engineer</span>.
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
+            I'm passionate about building my own applications, running a home-lab, and exploring everything open source. I love automation and making Linux work for me!
+        </p>
+    </section>
+
+    <!-- 2. Core Focus Section -->
+    <section id="focus" class="py-16">
+        <div class="grid md:grid-cols-3 gap-10">
+            <!-- Focus: Open Source -->
+            <div class="bg-slate-800 p-8 rounded-lg shadow-lg">
+                <div class="icon text-primary mb-4">&#x1f4e6;</div> <!-- Package Icon -->
+                <h3 class="text-2xl font-bold mb-3 text-white">Open Source</h3>
+                <p class="text-slate-300">
+                    Contributing to and building with open-source tools is at the heart of what I do. I believe in the power of community-driven development and shared knowledge.
+                </p>
+            </div>
+            <!-- Focus: Automation -->
+            <div class="bg-slate-800 p-8 rounded-lg shadow-lg">
+                <div class="icon text-accent mb-4">&#x1f9be;</div> <!-- Mechanical Arm Icon -->
+                <h3 class="text-2xl font-bold mb-3 text-white">Automation</h3>
+                <p class="text-slate-300">
+                    From CI/CD pipelines with GitHub Actions to declarative infrastructure with Ansible and Docker, I'm always looking for ways to automate my workflows and lab.
+                </p>
+            </div>
+            <!-- Focus: Home Lab -->
+            <div class="bg-slate-800 p-8 rounded-lg shadow-lg">
+                <div class="icon text-primary mb-4">&#x1f6e0;</div> <!-- Tools Icon -->
+                <h3 class="text-2xl font-bold mb-3 text-white">Home Lab</h3>
+                <p class="text-slate-300">
+                    My personal cluster of single-board computers and repurposed hardware is my playground for testing new ideas, self-hosting services, and managing my own infrastructure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Current Projects Section (NOW DYNAMIC) -->
+    <section id="projects" class="py-16 border-t border-gray-800">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-white">Current Projects</h2>
+        <div class="section-separator mx-auto"></div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Hugo: Range over pages in 'projects' section -->
+            {{ $projects := where .Site.RegularPages "Section" "projects" }}
+            {{ $recentProjects := first 2 (sort $projects "Date" "desc") }}
+
+            {{ if ge (len $recentProjects) 1 }}
+                {{ range $index, $project := $recentProjects }}
+                    <!-- Determine alternating colors -->
+                    {{ $borderColor := "border-primary" }}
+                    {{ $textColor := "text-primary" }}
+                    {{ $linkHover := "hover:text-indigo-400" }}
+                    {{ if eq (mod $index 2) 1 }}
+                        {{ $borderColor = "border-accent" }}
+                        {{ $textColor = "text-accent" }}
+                        {{ $linkHover = "hover:text-emerald-400" }}
+                    {{ end }}
+
+                    <div class="bg-slate-800 rounded-lg shadow-lg overflow-hidden border-l-4 {{ $borderColor }}">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-3 {{ $textColor }}">{{ .Title }}</h3>
+                            <div class="text-slate-300 mb-6 line-clamp-3">
+                                {{ .Summary | plainify | safeHTML }}
+                            </div>
+                            <!-- Tech stack from front matter -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                {{ with .Params.tech }}
+                                    {{ range . }}
+                                        <span class="bg-slate-700 text-slate-300 text-xs font-medium px-3 py-1 rounded-full">{{ . }}</span>
+                                    {{ end }}
+                                {{ end }}
+                            </div>
+                            <!-- Repo link from front matter -->
+                            {{ with .Params.repo_url }}
+                            <a href="{{ . }}" class="font-semibold {{ $textColor }} {{ $linkHover }} inline-flex items-center group transition duration-300">
+                                <!-- Use default text or text from front matter, then add arrow -->
+                                {{ $project.Params.repo_text | default "View Project" }} &rarr;
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            {{ else }}
+                <p class="text-slate-400 text-center md:col-span-2">I'll be adding my projects here soon. Stay tuned!</p>
+            {{ end }}
+        </div>
+    </section>
+
+
+    <!-- 4. Blog Section (NOW DYNAMIC) -->
+    <section id="blog" class="py-16 border-t border-gray-800">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-white">Latest Lab Notes & Blog</h2>
+        <div class="section-separator mx-auto"></div>
+
+        <!-- Hugo: Find recent blog pages -->
+        {{ $blogPages := where .Site.RegularPages "Section" "blog" }}
+        {{ $recentPosts := first 3 (sort $blogPages "Date" "desc") }}
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {{ if ge (len $recentPosts) 1 }}
+                {{ range $recentPosts }}
+                <a href="{{ .RelPermalink }}" class="block bg-slate-800 rounded-lg shadow-lg p-8 group hover:bg-slate-700 transition duration-300">
+                    <span class="text-sm text-slate-400">{{ .Date.Format "Jan 2, 2006" }}</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-primary transition duration-300">{{ .Title }}</h3>
+                    <p class="text-slate-300 line-clamp-3">{{ .Summary | plainify | safeHTML }}</p>
+                </a>
+                {{ end }}
+            {{ else }}
+                <!-- Show this message if no posts are found -->
+                <p class="text-slate-400 text-center md:col-span-3">No lab notes posted yet. Check back soon!</p>
+            {{ end }}
+        </div>
+
+        <!-- Link to the main blog list page -->
+        {{ with .Site.GetPage "section" "blog" }}
+            <div class="text-center mt-12">
+                <a href="{{ .RelPermalink }}" class="text-lg font-semibold text-accent hover:text-emerald-400 transition duration-300">
+                    Read All Lab Notes &rarr;
+                </a>
+            </div>
+        {{ end }}
+    </section>
+
+    <!-- 5. Contact Section (NOW DYNAMIC) -->
+    <section id="contact" class="pt-12 pb-16 border-t border-gray-800">
+        <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-white text-center">Let's Connect</h3>
+        <div class="section-separator mx-auto"></div>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-12 text-center">
+            Whether you want to discuss a new open-source project, trade automation tips, or or just talk about the latest Linux kernel update, feel free to reach out.
+        </p>
+        <div class="flex justify-center space-x-8">
+            <!-- GitHub -->
+            <!-- Pulls from hugo.toml: [params.social] github = "..." -->
+            {{ with .Site.Params.social.github }}
+            <a href="{{ . }}" class="text-primary hover:text-indigo-400 transition duration-300" aria-label="GitHub Profile">
+                <!-- Inline SVG for GitHub Icon -->
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.5.499.09.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.577.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            {{ end }}
+            
+            <!-- Mastodon -->
+            <!-- Pulls from hugo.toml: [params.social] mastodon = "..." -->
+            {{ with .Site.Params.social.mastodon }}
+            <a href="{{ . }}" class="text-primary hover:text-indigo-400 transition duration-300" aria-label="Mastodon Profile">
+                <!-- Inline SVG for Mastodon Icon -->
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M23.193 7.88c0-5.207-3.411-6.733-3.411-6.733C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.13.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.13.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.801.776-1.801 2.312v3.349h-2.483v-3.35c0-1.536-.601-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.833V8.284c0-1.289.328-2.313.987-3.07.679-.757 1.568-1.146 2.674-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.622-1.043c.64-.983 1.608-1.474 2.886-1.474 1.106 0 1.995.389 2.674 1.146.659.757.987 1.781.987 3.07v6.305z"/>
+                </svg>
+            </a>
+            {{ end }}
+
+            <!-- Bluesky -->
+            <!-- Pulls from hugo.toml: [params.social] bluesky = "..." -->
+            {{ with .Site.Params.social.bluesky }}
+            <a href="{{ . }}" class="text-primary hover:text-indigo-400 transition duration-300" aria-label="Bluesky Profile">
+                <!-- Inline SVG for Bluesky Icon -->
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/>
+                </svg>
+            </a>
+            {{ end }}
+
+            <!-- Email -->
+            <!-- Pulls from hugo.toml: [params.social] email = "..." -->
+            {{ with .Site.Params.social.email }}
+            <a href="mailto:{{ . }}" class="text-3xl text-primary hover:text-indigo-400 transition duration-300" aria-label="Email Address">
+                &#x2709;&#xfe0f; <!-- Email Icon -->
+            </a>
+            {{ end }}
+        </div>
+    </section>
+
+</main>
+{{ end }}

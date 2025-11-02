@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The .Title will come from your front matter (e.g., in content/_index.md) -->
+    <title>{{ .Title }}</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#4f46e5', // Indigo-600 for primary actions
+                        'accent': '#10b981',  // Emerald-500 for secondary highlights
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Load Inter Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Base Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate-900 Dark Background */
+            color: #e2e8f0; /* Slate-200 Light Text */
+        }
+        .container-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-padding {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+        .section-separator {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #10b981; /* Accent color */
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+            border-radius: 9999px;
+        }
+        .icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        /* Ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Header Partial -->
+    <!-- Hugo will look for 'header.html' in 'layouts/partials/' -->
+    {{ partial "header.html" . }}
+
+    <!-- Main Content Block -->
+    <!-- This is where your 'layouts/index.html' content will be injected -->
+    <main id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Footer Partial -->
+    <!-- Hugo will look for 'footer.html' in 'layouts/partials/' -->
+    {{ partial "footer.html" . }}
+
+</body>
+</html>

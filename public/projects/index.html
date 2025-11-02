@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Projects</title>
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#4f46e5', 
+                        'accent': '#10b981',  
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;  
+            color: #e2e8f0;  
+        }
+        .container-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-padding {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+        .section-separator {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #10b981;  
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+            border-radius: 9999px;
+        }
+        .icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+         
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    
+    
+    
+<header class="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 container-padding">
+        <h1 class="text-2xl font-bold text-accent">
+            <span class="text-primary pr-1">&lt;</span>MickGeekLabs<span class="text-primary pl-1">/&gt;</span>
+        </h1>
+        
+        <nav class="hidden sm:flex space-x-6 text-gray-400 font-medium">
+            
+                <a href="#about" class="hover:text-primary transition duration-300">About</a>
+            
+                <a href="#focus" class="hover:text-primary transition duration-300">Focus</a>
+            
+                <a href="#projects" class="hover:text-primary transition duration-300">Projects</a>
+            
+                <a href="#blog" class="hover:text-primary transition duration-300">Blog</a>
+            
+                <a href="#tech" class="hover:text-primary transition duration-300">Tech Stack</a>
+            
+                <a href="#contact" class="hover:text-primary transition duration-300">Connect</a>
+            
+        </nav>
+        
+        <button class="sm:hidden text-gray-400 hover:text-primary transition duration-300">
+            &#9776; 
+        </button>
+    </div>
+</header>
+
+
+
+    
+    
+    <main id="main-content">
+        
+
+<div class="max-w-4xl mx-auto py-12 sm:py-20 container-padding">
+    
+    
+    <header class="pb-8 border-b border-gray-800">
+        
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4">Projects</h1>
+        
+        
+        
+    </header>
+
+    
+    <ul class="divide-y divide-gray-800 pt-8">
+        
+        
+        
+        
+        <li class="py-6">
+            <a href="/projects/home-gateway/" class="block group">
+                <article>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                        <h2 class="text-2xl font-semibold text-white group-hover:text-primary transition duration-300">
+                            Home Automation Gateway
+                        </h2>
+                        <time datetime="2024-10-25" class="text-sm text-gray-500 mt-1 sm:mt-0">
+                            Oct 25, 2024
+                        </time>
+                    </div>
+                    
+                    <p class="text-gray-400 line-clamp-3">
+                        <p>A custom Python application running on a Raspberry Pi cluster (K3s) that processes sensor data and exposes a local API for managing home devices via MQTT.</p>
+                    </p>
+                </article>
+            </a>
+        </li>
+        
+    </ul>
+
+</div>
+
+    </main>
+
+    
+    
+    
+<footer class="bg-gray-900 border-t border-gray-800 py-6">
+    <div class="max-w-7xl mx-auto text-center text-sm text-gray-500 container-padding">
+        &copy; 2025 Hobbyist Engineer. Built with a passion for code and infrastructure.
+    </div>
+</footer>
+
+
+</body>
+</html>

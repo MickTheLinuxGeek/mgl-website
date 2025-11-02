@@ -1,0 +1,38 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = '<MickGeekLabs/>'
+
+[params]
+  description = "A hobbyist engineer building, automating, and self-hosting with open source."
+
+[params.social]
+  github = "https://github.com/MickTheLinuxGeek"
+  mastodon = "https://mastodon.social/@mick_the_linux_geek"
+  bluesky = "https://bsky.app/profile/mickthelinuxgeek.bsky.social"
+  email = "mick.the.linux.geek@hotmail.com"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 10
+  [[menu.main]]
+    name = "Focus"
+    url = "#focus"
+    weight = 20
+  [[menu.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 30
+  [[menu.main]]
+    name = "Blog"
+    url = "#blog"
+    weight = 40
+  [[menu.main]]
+    name = "Tech Stack"
+    url = "#tech"
+    weight = 50
+  [[menu.main]]
+    name = "Connect"
+    url = "#contact"
+    weight = 60

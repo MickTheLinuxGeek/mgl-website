@@ -1,0 +1,48 @@
+{{ define "main" }}
+<!-- This template is for a single blog post -->
+<article class="max-w-4xl mx-auto py-12 sm:py-20 container-padding">
+    
+    <!-- Post Header -->
+    <header class="pb-8 border-b border-gray-800">
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">{{ .Title }}</h1>
+        <div class="text-gray-500">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                Published on {{ .Date.Format "January 2, 2006" }}
+            </time>
+            <!-- Show tags if they exist -->
+            {{ with .Params.tags }}
+            <div class="mt-4">
+                {{ range . }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="inline-block px-3 py-1 bg-gray-700 text-accent text-sm font-medium rounded-full mr-2 mb-2 hover:bg-gray-600 transition">
+                        #{{ . }}
+                    </a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <!-- .Content is your Markdown file rendered as HTML -->
+    <!-- The 'prose' classes add nice default styling to your Markdown content -->
+    <div class="prose prose-invert lg:prose-xl max-w-none text-gray-300 pt-8">
+        {{ .Content }}
+    </div>
+    
+    <!-- Basic styling for the .prose class from Tailwind -->
+    <!-- This makes your Markdown content (headings, links, code) look good -->
+    <style>
+        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { color: #fff; font-weight: 600; margin-top: 1.5em; margin-bottom: 0.5em;}
+        .prose a { color: #10b981; text-decoration: none; font-weight: 500; }
+        .prose a:hover { text-decoration: underline; }
+        .prose p { margin-top: 1em; margin-bottom: 1em; line-height: 1.7; }
+        .prose ul, .prose ol { margin-top: 1em; margin-bottom: 1em; padding-left: 1.5em; }
+        .prose li > p { margin-top: 0; margin-bottom: 0; }
+        .prose li { margin-top: 0.25em; margin-bottom: 0.25em; }
+        .prose code { color: #e2e8f0; background-color: #334155; padding: 0.25em 0.5em; border-radius: 0.25em; font-size: 0.9em; }
+        .prose pre { background-color: #1e293b; color: #e2e8f0; padding: 1em; border-radius: 0.5em; overflow-x: auto; }
+        .prose pre code { background-color: transparent; padding: 0; }
+        .prose blockquote { border-left: 4px solid #4f46e5; padding-left: 1em; color: #94a3b8; font-style: italic; }
+    </style>
+</article>
+{{ end }}

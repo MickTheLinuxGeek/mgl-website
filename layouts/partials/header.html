@@ -1,0 +1,19 @@
+<!-- Header / Navigation (Simple & Fixed) -->
+<header class="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 container-padding">
+        <h1 class="text-2xl font-bold text-accent">
+            <span class="text-primary pr-1">&lt;</span>MickGeekLabs<span class="text-primary pl-1">/&gt;</span>
+        </h1>
+        <!-- Simple Desktop Navigation -->
+        <nav class="hidden sm:flex space-x-6 text-gray-400 font-medium">
+            {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="hover:text-primary transition duration-300">{{ .Name }}</a>
+            {{ end }}
+        </nav>
+        <!-- Mobile Menu Placeholder (Not functional, but shows design intent) -->
+        <button class="sm:hidden text-gray-400 hover:text-primary transition duration-300">
+            &#9776; <!-- Hamburger Icon -->
+        </button>
+    </div>
+</header>
+

@@ -7,7 +7,6 @@ hugo_stats.json
 
 # Node/npm
 node_modules/
-package-lock.json
 
 # Editor files
 .vscode/

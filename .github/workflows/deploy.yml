@@ -18,9 +18,18 @@ jobs:
         # Use a community action to install the Hugo CLI
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.142.0'
           # Set the extended version if your theme requires Sass/SCSS
           extended: true
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📥 Install Node Dependencies
+        run: npm install
 
       - name: 🔨 Build Hugo Site
         run: hugo --minify

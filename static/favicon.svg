@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0f172a" rx="48"/>
+  
+  <!-- Accent border -->
+  <rect x="16" y="16" width="224" height="224" fill="none" stroke="#10b981" stroke-width="4" rx="40"/>
+  
+  <!-- MGL Text -->
+  <text x="128" y="170" font-family="Inter, sans-serif" font-size="120" font-weight="700" fill="#4f46e5" text-anchor="middle">MGL</text>
+  
+  <!-- Accent dot -->
+  <circle cx="208" cy="70" r="12" fill="#10b981"/>
+</svg>

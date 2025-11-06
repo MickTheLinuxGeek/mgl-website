@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta property="og:title" content="Categories">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mickgeeklabs.org/categories/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Categories">
+    <meta name="twitter:description" content="">
+
     
-    <title>Categories</title>
+    
+
+    <title>Categories | &lt;MickGeekLabs/&gt;</title>
     
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0f172a">
+    
+    
+    
+  
+  
+    
+      
+        <link rel="stylesheet" href="/css/main.3c03cedb6550297a6ee610b525227424ffc63676460175c871c9a1f9087a7488.css" integrity="sha256-PAPO22VQKXpu5hC1JSJ0JP/GNnZGAXXIccmh&#43;Qh6dIg=" crossorigin="anonymous">
+      
+    
+  
+
     
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'primary': '#4f46e5', 
-                        'accent': '#10b981',  
-                    }
-                }
-            }
-        }
     </script>
     
     
@@ -99,11 +115,51 @@
             
         </nav>
         
-        <button class="sm:hidden text-gray-400 hover:text-primary transition duration-300">
+        <button id="mobile-menu-button" class="sm:hidden text-gray-400 hover:text-primary transition duration-300" aria-label="Toggle mobile menu">
             &#9776; 
         </button>
     </div>
+    
+    <nav id="mobile-menu" class="hidden sm:hidden bg-slate-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-4 container-padding flex flex-col space-y-3">
+            
+                <a href="#about" class="text-gray-400 hover:text-primary transition duration-300 py-2">About</a>
+            
+                <a href="#focus" class="text-gray-400 hover:text-primary transition duration-300 py-2">Focus</a>
+            
+                <a href="#projects" class="text-gray-400 hover:text-primary transition duration-300 py-2">Projects</a>
+            
+                <a href="#blog" class="text-gray-400 hover:text-primary transition duration-300 py-2">Blog</a>
+            
+                <a href="#tech" class="text-gray-400 hover:text-primary transition duration-300 py-2">Tech Stack</a>
+            
+                <a href="#contact" class="text-gray-400 hover:text-primary transition duration-300 py-2">Connect</a>
+            
+        </div>
+    </nav>
 </header>
+
+<script>
+    
+    (function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    })();
+</script>
 
 
 
@@ -140,7 +196,7 @@
     
 <footer class="bg-gray-900 border-t border-gray-800 py-6">
     <div class="max-w-7xl mx-auto text-center text-sm text-gray-500 container-padding">
-        &copy; 2025 Hobbyist Engineer. Built with a passion for code and infrastructure.
+        &copy; 2025 Michael Biel & MickGeekLabs -- Built with a passion for code and infrastructure.
     </div>
 </footer>
 

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+@theme {
+  --font-family-sans: 'Inter', sans-serif;
+  --color-primary: #4f46e5;
+  --color-accent: #10b981;
+}
+
+/* You can add any custom CSS below this line */

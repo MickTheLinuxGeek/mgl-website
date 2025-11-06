@@ -1,0 +1,20 @@
+# Hugo build artifacts
+
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Node/npm
+node_modules/
+package-lock.json
+
+# Editor files
+.vscode/
+.idea/
+
+# Misc.
+nanobanana-output/
+.gemini/
+GEMINI.md
+WARP.md

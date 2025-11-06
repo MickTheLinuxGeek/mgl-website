@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.142.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.142.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+    <meta property="og:title" content="&lt;MickGeekLabs/&gt;">
+    <meta property="og:description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mickgeeklabs.org/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="&lt;MickGeekLabs/&gt;">
+    <meta name="twitter:description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+
     
-    <title></title>
+    
+
+    <title>&lt;MickGeekLabs/&gt;</title>
     
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0f172a">
+    
+    
+    
+  
+  
+    
+      
+        <link rel="stylesheet" href="/css/main.3c03cedb6550297a6ee610b525227424ffc63676460175c871c9a1f9087a7488.css" integrity="sha256-PAPO22VQKXpu5hC1JSJ0JP/GNnZGAXXIccmh&#43;Qh6dIg=" crossorigin="anonymous">
+      
+    
+  
+
     
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'primary': '#4f46e5', 
-                        'accent': '#10b981',  
-                    }
-                }
-            }
-        }
     </script>
     
     
@@ -100,11 +116,51 @@
             
         </nav>
         
-        <button class="sm:hidden text-gray-400 hover:text-primary transition duration-300">
+        <button id="mobile-menu-button" class="sm:hidden text-gray-400 hover:text-primary transition duration-300" aria-label="Toggle mobile menu">
             &#9776; 
         </button>
     </div>
+    
+    <nav id="mobile-menu" class="hidden sm:hidden bg-slate-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-4 container-padding flex flex-col space-y-3">
+            
+                <a href="#about" class="text-gray-400 hover:text-primary transition duration-300 py-2">About</a>
+            
+                <a href="#focus" class="text-gray-400 hover:text-primary transition duration-300 py-2">Focus</a>
+            
+                <a href="#projects" class="text-gray-400 hover:text-primary transition duration-300 py-2">Projects</a>
+            
+                <a href="#blog" class="text-gray-400 hover:text-primary transition duration-300 py-2">Blog</a>
+            
+                <a href="#tech" class="text-gray-400 hover:text-primary transition duration-300 py-2">Tech Stack</a>
+            
+                <a href="#contact" class="text-gray-400 hover:text-primary transition duration-300 py-2">Connect</a>
+            
+        </div>
+    </nav>
 </header>
+
+<script>
+    
+    (function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    })();
+</script>
 
 
 
@@ -195,29 +251,23 @@
 
             <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-l-4 border-accent hover:bg-gray-700 transition duration-300">
                 <h4 class="text-2xl font-semibold mb-2 text-accent">
-                    Home Automation Gateway
+                    Developer Issue Tracking Scheme -- DITS
                 </h4>
                 
                 
                 
                 <p class="text-sm text-gray-400 mb-4">
-                    Linux, Python, Docker, MQTT
+                    Backend: TypeScript w/Node.js, PostgreSQL, Redis, GraphQL &amp; REST, Frontend: React w/TypeScript, Build: Vite
                 </p>
                 
                 
                 
                 <p class="text-gray-300 mb-4">
-                    A custom Python application running on a Raspberry Pi cluster (K3s) that processes sensor data and exposes a local API for managing home devices via MQTT.
+                    DITS (Developer Issue Tracking System) is a purpose-built issue tracker designed exclusively for individual software developers. It eliminates the &ldquo;collaboration tax&rdquo; of team-oriented tools by providing friction-less issue capture, sub-100ms interactions, and deep bidirectional Git integration, offering a keyboard-first, flow-state-optimized experience across web, desktop, mobile, and IDE platforms while ensuring complete data portability and user ownership.
 
                 </p>
                 
                 
-                
-                <a href="https://github.com/your-username/home-gateway" class="text-primary hover:underline font-medium flex items-center">
-                    
-                    
-                    View Code on GitHub  &rarr;
-                </a>
                 
             </div>
             
@@ -240,8 +290,30 @@
         <div class="grid md:grid-cols-3 gap-8">
             
             
-            
-            <p classF="text-gray-400 md:col-span-3 text-center">No blog posts found yet. Check back soon!</p>
+            <a href="/blog/my-first-blog-post/" class="block bg-gray-800 p-6 rounded-xl shadow-xl hover:bg-gray-700 transition duration-300 group">
+                
+                
+                <p class="text-sm font-semibold text-accent mb-2">
+                    
+                        Blog | 
+                    
+                    Nov 4, 2025
+                </p>
+                
+                <h4 class="text-xl font-semibold mb-2 text-white group-hover:text-primary transition duration-300">
+                    Creating A Website
+                </h4>
+                
+                
+                <p class="text-gray-400 line-clamp-3 mb-3">
+                    <p>Well here it is.  I finally built my first website, my own place on the internet.
+I have always wanted to build a blog and post interesting stuff, but could never find a good way to accomplish this. …</p>
+                </p>
+                
+                <span class="text-primary hover:text-indigo-400 font-medium transition duration-300">
+                    Read More &rarr;
+                </span>
+            </a>
             
 
         </div>
@@ -249,6 +321,10 @@
         
         <div class="mt-8 text-center">
             
+            
+            <a href="/blog/" class="inline-block px-6 py-2 border border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition duration-300">
+                Read All Posts &rarr;
+            </a>
             
         </div>
     </section>
@@ -322,7 +398,7 @@
             
             
             
-            <a href="mailto:mick.the.linux.geek@hotmail.com" class="text-3xl text-primary hover:text-indigo-400 transition duration-3D" aria-label="Email Address">
+            <a href="mailto:mick.the.linux.geek@hotmail.com" class="text-3xl text-primary hover:text-indigo-400 transition duration-300" aria-label="Email Address">
                 &#x2709;&#xfe0f; 
             </a>
             

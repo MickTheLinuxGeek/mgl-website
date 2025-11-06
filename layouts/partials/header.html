@@ -10,10 +10,40 @@
                 <a href="{{ .URL }}" class="hover:text-primary transition duration-300">{{ .Name }}</a>
             {{ end }}
         </nav>
-        <!-- Mobile Menu Placeholder (Not functional, but shows design intent) -->
-        <button class="sm:hidden text-gray-400 hover:text-primary transition duration-300">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="sm:hidden text-gray-400 hover:text-primary transition duration-300" aria-label="Toggle mobile menu">
             &#9776; <!-- Hamburger Icon -->
         </button>
     </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <nav id="mobile-menu" class="hidden sm:hidden bg-slate-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto py-4 container-padding flex flex-col space-y-3">
+            {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="text-gray-400 hover:text-primary transition duration-300 py-2">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </nav>
 </header>
+
+<script>
+    // Mobile menu toggle functionality
+    (function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when clicking on a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    })();
+</script>
 

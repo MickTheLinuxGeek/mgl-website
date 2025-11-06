@@ -1,0 +1,41 @@
+name: Hugo Site CI/CD to FTP
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow on every push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Needed if you use a Hugo theme as a submodule
+
+      - name: ⚙️ Setup Hugo
+        # Use a community action to install the Hugo CLI
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # Set the extended version if your theme requires Sass/SCSS
+          extended: true
+
+      - name: 🔨 Build Hugo Site
+        run: hugo --minify
+        # The hugo command generates the static files into the 'public/' directory
+
+      - name: 🚀 Deploy to FTP Server
+        # Use a community action designed for FTP deployment
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          # Use the secrets created in Step 1
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_REMOTE_PATH }}
+          local-dir: ./public/
+          # Recommended for traditional hosts:
+          protocol: ftp 
+          # Or 'ftps' if your host supports/requires it.

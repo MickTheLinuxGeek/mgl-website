@@ -145,14 +145,18 @@
                     {{ .Title }}
                 </h4>
                 
-                <!-- Use Hugo's .Summary for the post preview -->
-                <p class="text-gray-400 line-clamp-3">
-                    {{ .Summary }}
+                <!-- Use Hugo's .Summary for the post preview, truncated to ~200 chars (approx 3 sentences) -->
+                <p class="text-gray-400 line-clamp-3 mb-3">
+                    {{ .Summary | truncate 200 }}
                 </p>
+                
+                <span class="text-primary hover:text-indigo-400 font-medium transition duration-300">
+                    Read More &rarr;
+                </span>
             </a>
             {{ else }}
             <!-- Show this if no posts are found in /content/blog/ -->
-            <p classF="text-gray-400 md:col-span-3 text-center">No blog posts found yet. Check back soon!</p>
+            <p class="text-gray-400 md:col-span-3 text-center">No blog posts found yet. Check back soon!</p>
             {{ end }}
 
         </div>
@@ -237,7 +241,7 @@
             <!-- Email -->
             <!-- Pulls from hugo.toml: [params.social] email = "..." -->
             {{ with .Site.Params.social.email }}
-            <a href="mailto:{{ . }}" class="text-3xl text-primary hover:text-indigo-400 transition duration-3D" aria-label="Email Address">
+            <a href="mailto:{{ . }}" class="text-3xl text-primary hover:text-indigo-400 transition duration-300" aria-label="Email Address">
                 &#x2709;&#xfe0f; <!-- Email Icon -->
             </a>
             {{ end }}

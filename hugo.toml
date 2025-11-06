@@ -1,6 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://mickgeeklabs.org/'
 languageCode = 'en-us'
 title = '<MickGeekLabs/>'
+summaryLength = 50
+pluralizeListTitles = false
 
 [params]
   description = "A hobbyist engineer building, automating, and self-hosting with open source."
@@ -36,3 +38,24 @@ title = '<MickGeekLabs/>'
     name = "Connect"
     url = "#contact"
     weight = 60
+
+# hugo.toml
+[build]
+  [build.buildStats]
+    enable = true # Important for generating hugo_stats.json
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js' # Kept for safety, though v4 doesn't use it
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    # This mounts the generated hugo_stats.json file into the assets folder
+    disableWatch = true 
+    source = 'hugo_stats.json' 
+    target = 'assets/notwatching/hugo_stats.json'

@@ -9,6 +9,10 @@
             <time datetime="{{ .Date.Format "2006-01-02" }}">
                 Published on {{ .Date.Format "January 2, 2006" }}
             </time>
+            <span class="mx-2">•</span>
+            <span>{{ .ReadingTime }} min read</span>
+            <span class="mx-2">•</span>
+            <span>{{ .WordCount }} words</span>
             <!-- Show tags if they exist -->
             {{ with .Params.tags }}
             <div class="mt-4">

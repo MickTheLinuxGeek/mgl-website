@@ -6,8 +6,15 @@
     <description>Recent content on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Nov 2025 10:43:22 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 08 Nov 2025 20:04:54 -0500</lastBuildDate>
     <atom:link href="https://mickgeeklabs.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website Deployed</title>
+      <link>https://mickgeeklabs.org/blog/website-deployed/</link>
+      <pubDate>Sat, 08 Nov 2025 20:04:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/blog/website-deployed/</guid>
+      <description>&lt;p&gt;Website deployed!  I finally have my own website; My own space on the web.  For the last few years, I have wanted to build a website to showcase&#xA;the projects I am working on, and have a place to blog.  Like I said in my first post, I tried to use Hugo to build a website before, but always&#xA;struggled with the templates and how all files fit together.  I tried a couple different times, and I still have the GitHub repositories from those&#xA;attempts.  I tried to modify one of Hugo&amp;rsquo;s templates to fit my use case, but could not achieve something I liked, and starting from a blank canvas&#xA;was not going to work either, as I am not that creative with these kinds of things.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Developer Issue Tracking Scheme -- DITS</title>
       <link>https://mickgeeklabs.org/projects/dits/</link>

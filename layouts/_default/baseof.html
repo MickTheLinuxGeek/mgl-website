@@ -26,6 +26,9 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0f172a">
     
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS Feed" href="{{ .Site.BaseURL }}index.xml" />
+    
     <!-- Load Tailwind CSS -->
     {{ partial "css.html" . }}
     

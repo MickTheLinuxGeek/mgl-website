@@ -4,6 +4,10 @@ title = '<MickGeekLabs/>'
 summaryLength = 50
 pluralizeListTitles = false
 
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
 [params]
   description = "A hobbyist engineer building, automating, and self-hosting with open source."
 
@@ -38,6 +42,10 @@ pluralizeListTitles = false
     name = "Connect"
     url = "#contact"
     weight = 60
+  [[menu.main]]
+    name = "RSS Feed"
+    url = "/rss/"
+    weight = 70
 
 # hugo.toml
 [build]

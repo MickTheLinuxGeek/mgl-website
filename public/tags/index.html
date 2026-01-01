@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +8,7 @@
     <meta property="og:title" content="Tags">
     <meta property="og:description" content="">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mickgeeklabs.org/tags/">
+    <meta property="og:url" content="http://localhost:1313/tags/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Tags">
     <meta name="twitter:description" content="">
@@ -27,16 +27,14 @@
     <meta name="theme-color" content="#0f172a">
     
     
-    <link rel="alternate" type="application/rss+xml" title="&lt;MickGeekLabs/&gt; RSS Feed" href="https://mickgeeklabs.org/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="&lt;MickGeekLabs/&gt; RSS Feed" href="http://localhost:1313/index.xml" />
     
     
     
   
   
     
-      
-        <link rel="stylesheet" href="/css/main.ade1e368bc00b47ed7d206518f81f77ac17bc651d8f32370a409a3a7c2da610e.css" integrity="sha256-reHjaLwAtH7X0gZRj4H3esF7xlHY8yNwpAmjp8LaYQ4=" crossorigin="anonymous">
-      
+      <link rel="stylesheet" href="/css/main.css">
     
   
 
@@ -98,53 +96,80 @@
     
     
     
-<header class="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+<header class="sticky top-0 z-50 bg-bg-dark/80 backdrop-blur-md border-b border-border">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 container-padding">
-        <h1 class="text-2xl font-bold text-accent">
-            <a href="/" class="hover:opacity-80 transition duration-300">
-                <span class="text-primary pr-1">&lt;</span>MickGeekLabs<span class="text-primary pl-1">/&gt;</span>
+        <h1 class="text-xl font-mono font-bold tracking-tighter">
+            <a href="/" class="group flex items-center gap-1">
+                <span class="text-primary">$</span>
+                <span class="text-white group-hover:text-primary transition-colors">MGL</span>
+                <span class="text-gray-500">::</span>
+                <span class="text-accent group-hover:text-white transition-colors">LAB</span>
+                <span class="w-2 h-5 bg-primary inline-block animate-[pulse_1s_infinite] ml-1"></span>
             </a>
         </h1>
+
         
-        <nav class="hidden sm:flex space-x-6 text-gray-400 font-medium">
+        <nav class="hidden sm:flex items-center space-x-1">
             
-                <a href="#about" class="hover:text-primary transition duration-300">About</a>
+            <a href="#about"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                About
+            </a>
             
-                <a href="#focus" class="hover:text-primary transition duration-300">Focus</a>
+            <a href="#focus"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Focus
+            </a>
             
-                <a href="#projects" class="hover:text-primary transition duration-300">Projects</a>
+            <a href="#projects"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Projects
+            </a>
             
-                <a href="#blog" class="hover:text-primary transition duration-300">Blog</a>
+            <a href="#blog"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Blog
+            </a>
             
-                <a href="#tech" class="hover:text-primary transition duration-300">Tech Stack</a>
+            <a href="#tech"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Tech Stack
+            </a>
             
-                <a href="#contact" class="hover:text-primary transition duration-300">Connect</a>
+            <a href="#contact"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Connect
+            </a>
             
-                <a href="/rss/" class="hover:text-primary transition duration-300">RSS Feed</a>
+            <a href="/rss/"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                RSS Feed
+            </a>
             
         </nav>
+
         
-        <button id="mobile-menu-button" class="sm:hidden text-gray-400 hover:text-primary transition duration-300" aria-label="Toggle mobile menu">
-            &#9776; 
+        <button id="mobile-menu-button" class="sm:hidden text-primary font-mono text-xl" aria-label="Toggle Navigation">
+            [MENU]
         </button>
     </div>
     
-    <nav id="mobile-menu" class="hidden sm:hidden bg-slate-800 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto py-4 container-padding flex flex-col space-y-3">
+    <nav id="mobile-menu" class="hidden sm:hidden bg-panel border-b border-border">
+        <div class="flex flex-col p-4 font-mono text-xs uppercase tracking-widest">
             
-                <a href="#about" class="text-gray-400 hover:text-primary transition duration-300 py-2">About</a>
+            <a href="#about" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">About</a>
             
-                <a href="#focus" class="text-gray-400 hover:text-primary transition duration-300 py-2">Focus</a>
+            <a href="#focus" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Focus</a>
             
-                <a href="#projects" class="text-gray-400 hover:text-primary transition duration-300 py-2">Projects</a>
+            <a href="#projects" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Projects</a>
             
-                <a href="#blog" class="text-gray-400 hover:text-primary transition duration-300 py-2">Blog</a>
+            <a href="#blog" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Blog</a>
             
-                <a href="#tech" class="text-gray-400 hover:text-primary transition duration-300 py-2">Tech Stack</a>
+            <a href="#tech" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Tech Stack</a>
             
-                <a href="#contact" class="text-gray-400 hover:text-primary transition duration-300 py-2">Connect</a>
+            <a href="#contact" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Connect</a>
             
-                <a href="/rss/" class="text-gray-400 hover:text-primary transition duration-300 py-2">RSS Feed</a>
+            <a href="/rss/" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">RSS Feed</a>
             
         </div>
     </nav>
@@ -152,27 +177,25 @@
 
 <script>
     
-    (function() {
+    (function () {
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', function() {
+            menuButton.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
             });
-            
+
             
             const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
+            menuLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
                     mobileMenu.classList.add('hidden');
                 });
             });
         }
     })();
 </script>
-
-
 
     
     
@@ -349,12 +372,25 @@
     
     
     
-<footer class="bg-gray-900 border-t border-gray-800 py-6">
-    <div class="max-w-7xl mx-auto text-center text-sm text-gray-500 container-padding">
-        &copy; 2025 Michael Biel & MickGeekLabs -- Built with a passion for code and infrastructure.
+<footer class="bg-bg-dark border-t border-border py-12 mt-24">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 container-padding">
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-left">
+            &copy; 2026 Michael Biel<br>
+            <span class="text-gray-600">Built for personal infrastructure utility.</span>
+        </div>
+
+        <div class="flex gap-4">
+            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse [animation-delay:200ms]"></span>
+            <span class="w-2 h-2 bg-warning rounded-full animate-pulse [animation-delay:400ms]"></span>
+        </div>
+
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-right">
+            LOC_LAT: 42.3601 N<br>
+            LOC_LONG: 71.0589 W
+        </div>
     </div>
 </footer>
-
 
 </body>
 </html>

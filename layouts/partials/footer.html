@@ -1,6 +1,20 @@
 <!-- Footer -->
-<footer class="bg-gray-900 border-t border-gray-800 py-6">
-    <div class="max-w-7xl mx-auto text-center text-sm text-gray-500 container-padding">
-        &copy; {{ now.Format "2006" }} Michael Biel & MickGeekLabs -- Built with a passion for code and infrastructure.
+<footer class="bg-bg-dark border-t border-border py-12 mt-24">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 container-padding">
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-left">
+            &copy; {{ now.Format "2006" }} Michael Biel & MickGeekLabs<br>
+            <span class="text-gray-600">Built for personal infrastructure utility.</span>
+        </div>
+
+        <div class="flex gap-4">
+            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse [animation-delay:200ms]"></span>
+            <span class="w-2 h-2 bg-warning rounded-full animate-pulse [animation-delay:400ms]"></span>
+        </div>
+
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-right">
+            LOC_LAT: 34.002060 N<br>
+            LOC_LONG: 81.042022 W
+        </div>
     </div>
 </footer>

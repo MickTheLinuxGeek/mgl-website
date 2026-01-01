@@ -1,10 +1,127 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @source "hugo_stats.json";
 
 @theme {
-  --font-family-sans: 'Inter', sans-serif;
-  --color-primary: #4f46e5;
-  --color-accent: #10b981;
+  --font-family-sans: "JetBrains Mono", "Space Mono", monospace;
+  --font-family-mono: "JetBrains Mono", "Space Mono", monospace;
+
+  /* Industrial Lab Palette */
+  --color-bg-dark: #0a0c10;
+  --color-panel: #161b22;
+  --color-primary: #00ff41;
+  /* Phosphor Green */
+  --color-accent: #00f0ff;
+  /* Electric Cyan */
+  --color-warning: #ffb800;
+  /* Safety Amber */
+  --color-border: #30363d;
+
+  --shadow-glow: 0 0 10px var(--color-primary), 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
-/* You can add any custom CSS below this line */
+@layer base {
+  body {
+    @apply bg-bg-dark text-gray-300 font-sans selection:bg-primary selection:text-black;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Global Grid Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(rgba(48, 54, 61, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(48, 54, 61, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* CRT Scanline Effect */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.15;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono uppercase tracking-tighter text-white;
+  }
+
+  a {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .lab-card {
+    @apply bg-panel border border-border rounded-none p-6 relative overflow-hidden transition-all duration-300;
+    clip-path: polygon(0 0,
+        calc(100% - 15px) 0,
+        100% 15px,
+        100% 100%,
+        15px 100%,
+        0 calc(100% - 15px));
+  }
+
+  .lab-card:hover {
+    @apply border-primary shadow-glow;
+    transform: translateY(-2px);
+  }
+
+  .lab-card::before {
+    content: "[ MODULE ]";
+    @apply absolute top-1 right-2 text-[10px] font-mono text-gray-500;
+  }
+
+  .section-separator {
+    @apply h-px bg-border my-8 relative overflow-visible w-full;
+  }
+
+  .section-separator::after {
+    content: "";
+    @apply absolute right-0 -top-1 w-2 h-2 bg-primary rounded-full;
+  }
+
+  .tech-spec {
+    @apply px-3 py-1 bg-transparent border border-gray-600 text-[10px] font-mono rounded-none uppercase tracking-widest text-gray-400;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border: 2px solid var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>&lt;MickGeekLabs/&gt;</title>
-    <link>http://localhost:1313/</link>
+    <link>https://mickgeeklabs.org/</link>
     <description>Recent content on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Nov 2025 14:47:42 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 2026 16:56:05 -0500</lastBuildDate>
+    <atom:link href="https://mickgeeklabs.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rebooting for 2026: Tracking Issues and Breaking New Ground</title>
+      <link>https://mickgeeklabs.org/blog/happy-new-year-2026/</link>
+      <pubDate>Thu, 01 Jan 2026 16:56:05 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/blog/happy-new-year-2026/</guid>
+      <description>&lt;h2 id=&#34;happy-new-year--2026&#34;&gt;Happy New Year &amp;ndash; 2026&lt;/h2&gt;&#xA;&lt;p&gt;Happy New Year!  It has been awhile since I last posted.  I have been busily working on the DITS issue tracker application.&#xA;I am currently working on the last groups of development tasks for the web application.  After that, I have a list of things&#xA;I need to go back and add and/or complete.  I am hoping to have this work done by the end of January; Then It will be testing&#xA;and fixing issues.  I am looking forward to getting back to it, as I have taken a little break from it and working on some&#xA;other things.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DITS Origin</title>
-      <link>http://localhost:1313/blog/dits-origin/</link>
+      <link>https://mickgeeklabs.org/blog/dits-origin/</link>
       <pubDate>Sun, 16 Nov 2025 14:47:42 -0500</pubDate>
-      <guid>http://localhost:1313/blog/dits-origin/</guid>
+      <guid>https://mickgeeklabs.org/blog/dits-origin/</guid>
       <description>&lt;p&gt;One day awhile back, I was working on developing a blog application using Python and Django.  I came to a point where I needed to keep track of bugs, issues, and&#xA;items that needed research.  How was I going to do this?  I could use GitHub issues, as I keep the project in a repository.  That would work fine, but I would have to&#xA;keep switching context from my IDE to GitHub issues.  Eventually I would need to start tracking issues on GitHub, but I felt where I was at in the development process,&#xA;that was not the way I wanted to go.  So, what I ended up doing was creating a project.its file and dumped issues and whatever else that needed researched into&#xA;it.  Although this worked, the file ended up being an unformatted mess and difficult to track issues, especially if there were a lot.  What was I going to do?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website Deployed</title>
-      <link>http://localhost:1313/blog/website-deployed/</link>
+      <link>https://mickgeeklabs.org/blog/website-deployed/</link>
       <pubDate>Sat, 08 Nov 2025 20:04:54 -0500</pubDate>
-      <guid>http://localhost:1313/blog/website-deployed/</guid>
+      <guid>https://mickgeeklabs.org/blog/website-deployed/</guid>
       <description>&lt;p&gt;Website deployed!  I finally have my own website; My own space on the web.  For the last few years, I have wanted to build a website to showcase&#xA;the projects I am working on, and have a place to blog.  Like I said in my first post, I tried to use Hugo to build a website before, but always&#xA;struggled with the templates and how all files fit together.  I tried a couple different times, and I still have the GitHub repositories from those&#xA;attempts.  I tried to modify one of Hugo&amp;rsquo;s templates to fit my use case, but could not achieve something I liked, and starting from a blank canvas&#xA;was not going to work either, as I am not that creative with these kinds of things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Issue Tracking Scheme -- DITS</title>
-      <link>http://localhost:1313/projects/dits/</link>
+      <link>https://mickgeeklabs.org/projects/dits/</link>
       <pubDate>Tue, 04 Nov 2025 10:43:22 -0500</pubDate>
-      <guid>http://localhost:1313/projects/dits/</guid>
+      <guid>https://mickgeeklabs.org/projects/dits/</guid>
       <description>&lt;p&gt;DITS (Developer Issue Tracking System) is a purpose-built issue tracker designed exclusively for individual software developers. It eliminates the &amp;ldquo;collaboration tax&amp;rdquo; of&#xA;team-oriented tools by providing friction-less issue capture, sub-100ms interactions, and deep bidirectional Git integration, offering a keyboard-first,&#xA;flow-state-optimized experience across web, desktop, mobile, and IDE platforms while ensuring complete data portability and user ownership.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating A Website</title>
-      <link>http://localhost:1313/blog/my-first-blog-post/</link>
+      <link>https://mickgeeklabs.org/blog/my-first-blog-post/</link>
       <pubDate>Tue, 04 Nov 2025 09:09:30 -0500</pubDate>
-      <guid>http://localhost:1313/blog/my-first-blog-post/</guid>
+      <guid>https://mickgeeklabs.org/blog/my-first-blog-post/</guid>
       <description>&lt;p&gt;Well here it is.  I finally built my first website, my own place on the internet.&#xA;I have always wanted to build a blog and post interesting stuff, but could never find a good way to accomplish this.  I have tried building Hugo sites before, but&#xA;it never worked out.  I tried using one of Hugo&amp;rsquo;s themes, but trying to modify one of those to suit my needs turned into a nightmare.  Well, here I am again using&#xA;Hugo to build a website and a blog, this time with the help of AI.  Starting from a blank slate or trying to use one of Hugo&amp;rsquo;s themes just didn&amp;rsquo;t work for me.  If I&#xA;can get something I like to start with, then I have no problem taking off from there.  What I have so far looks good and I like it.  This is a work in progress and I&amp;rsquo;ll&#xA;be making changes as I go along.  I&amp;rsquo;ll see how it goes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RSS Feeds</title>
-      <link>http://localhost:1313/rss/</link>
+      <link>https://mickgeeklabs.org/rss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/rss/</guid>
+      <guid>https://mickgeeklabs.org/rss/</guid>
       <description>&lt;p&gt;Subscribe to updates from MickGeekLabs using RSS feeds.&lt;/p&gt;</description>
     </item>
   </channel>

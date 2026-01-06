@@ -15,7 +15,7 @@ pluralizeListTitles = false
   github = "https://github.com/MickTheLinuxGeek"
   mastodon = "https://mastodon.social/@mick_the_linux_geek"
   bluesky = "https://bsky.app/profile/mickthelinuxgeek.bsky.social"
-  email = "mick.the.linux.geek@hotmail.com"
+  email = "mickgeek@mickgeeklabs.org"
 
 [menu]
   [[menu.main]]

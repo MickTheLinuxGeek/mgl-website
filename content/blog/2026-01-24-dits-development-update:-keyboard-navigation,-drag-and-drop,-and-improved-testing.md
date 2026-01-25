@@ -3,6 +3,7 @@ date = '2026-01-24T21:12:15-05:00'
 draft = false
 title = 'DITS Development Update: Keyboard Navigation, Drag-and-Drop, and Improved Testing'
 categories = ['Dev Log', 'DITS']
+tags = ['DevLog', 'DITS']
 +++
 
 It's been a busy few weeks for the Developer Issue Tracking System (DITS). We've hit several major milestones that significantly improve both the user experience and the long-term maintainability of the project. Here's a look at what's been happening in the last six pull requests.

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.152.2">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+    <meta property="og:title" content="&lt;MickGeekLabs/&gt;">
+    <meta property="og:description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mickgeeklabs.org/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="&lt;MickGeekLabs/&gt;">
+    <meta name="twitter:description" content="A hobbyist engineer building, automating, and self-hosting with open source.">
+
+    
+    
+
+    <title>&lt;MickGeekLabs/&gt;</title>
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0f172a">
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="&lt;MickGeekLabs/&gt; RSS Feed" href="https://mickgeeklabs.org/index.xml" />
+    
+    
+    
+  
+  
+    
+      
+        <link rel="stylesheet" href="/css/main.1b2f0723ce6a63a77a55361263812b451940f6692984bf6d4e45a828af645ff0.css" integrity="sha256-Gy8HI85qY6d6VTYSY4ErRRlA9mkphL9tTkWoKK9kX/A=" crossorigin="anonymous">
+      
+    
+  
+
+    
+    
+    <script>
+    </script>
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;  
+            color: #e2e8f0;  
+        }
+        .container-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-padding {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+        .section-separator {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #10b981;  
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+            border-radius: 9999px;
+        }
+        .icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+         
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="f2c764b7-934d-4849-a1fb-b1d7d5f480dd">
+    </script>
+</head>
+<body class="min-h-screen antialiased">
+
+    
+    
+    
+<header class="sticky top-0 z-50 bg-bg-dark/80 backdrop-blur-md border-b border-border">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 container-padding">
+        <h1 class="text-xl font-mono font-bold tracking-tighter">
+            <a href="/" class="group flex items-center gap-1">
+                <span class="text-primary">$</span>
+                <span class="text-white group-hover:text-primary transition-colors">MGL</span>
+                <span class="text-gray-500">::</span>
+                <span class="text-accent group-hover:text-white transition-colors">LAB</span>
+                <span class="w-2 h-5 bg-primary inline-block animate-[pulse_1s_infinite] ml-1"></span>
+            </a>
+        </h1>
+
+        
+        <nav class="hidden sm:flex items-center space-x-1">
+            
+            <a href="#about"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                About
+            </a>
+            
+            <a href="#focus"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Focus
+            </a>
+            
+            <a href="#projects"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Projects
+            </a>
+            
+            <a href="#blog"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Blog
+            </a>
+            
+            <a href="#tech"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Tech Stack
+            </a>
+            
+            <a href="#contact"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                Connect
+            </a>
+            
+            <a href="/rss/"
+                class="px-4 py-2 text-xs font-mono text-gray-400 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest">
+                RSS Feed
+            </a>
+            
+        </nav>
+
+        
+        <button id="mobile-menu-button" class="sm:hidden text-primary font-mono text-xl" aria-label="Toggle Navigation">
+            [MENU]
+        </button>
+    </div>
+    
+    <nav id="mobile-menu" class="hidden sm:hidden bg-panel border-b border-border">
+        <div class="flex flex-col p-4 font-mono text-xs uppercase tracking-widest">
+            
+            <a href="#about" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">About</a>
+            
+            <a href="#focus" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Focus</a>
+            
+            <a href="#projects" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Projects</a>
+            
+            <a href="#blog" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Blog</a>
+            
+            <a href="#tech" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Tech Stack</a>
+            
+            <a href="#contact" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">Connect</a>
+            
+            <a href="/rss/" class="py-4 text-gray-400 hover:text-white border-b border-border last:border-0">RSS Feed</a>
+            
+        </div>
+    </nav>
+</header>
+
+<script>
+    
+    (function () {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    })();
+</script>
+
+    
+    
+    <main id="main-content">
+        
+
+<main class="max-w-7xl mx-auto py-12 sm:py-20 container-padding">
+
+    
+    <section id="about" class="pb-16 text-center sm:text-left relative">
+        <div
+            class="absolute -top-10 -left-10 text-primary opacity-30 font-mono text-[10px] select-none uppercase tracking-[0.5em]">
+            SYSTEM_STATUS: ONLINE<br>
+            CORE_TEMP: OPTIMAL<br>
+            UPLINK: ACTIVE
+        </div><br>
+        <p class="text-sm font-mono text-accent mb-4 uppercase tracking-widest flex items-center gap-2">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            INITIATING: MickTheLinuxGeek
+        </p>
+        <h2 class="text-5xl sm:text-8xl font-black leading-[0.9] mb-8">
+            <span class="text-white block hover:text-primary transition-colors cursor-default">BUILD.</span>
+            <span class="text-white block hover:text-accent transition-colors cursor-default">AUTOMATE.</span>
+            <span class="text-primary block glow-text">HOST.</span>
+        </h2>
+        <p class="text-lg font-mono max-w-2xl text-gray-400 leading-relaxed border-l-2 border-border pl-6">
+            Exploring the intersection of code and infrastructure. Driven by **open source**, efficient **automation**,
+            and mastering the Linux ecosystem within a dedicated **home lab**.
+        </p>
+        <div class="mt-12 flex flex-wrap gap-4">
+            <a href="#focus"
+                class="group relative px-8 py-4 bg-primary text-black font-bold uppercase tracking-tighter hover:bg-white transition-all duration-300">
+                <span class="relative z-10">Access Focus Areas //</span>
+                <span
+                    class="absolute inset-0 bg-white translate-x-1 translate-y-1 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></span>
+            </a>
+            <a href="#projects"
+                class="px-8 py-4 border border-border text-white font-bold uppercase tracking-tighter hover:border-accent hover:text-accent transition-all">
+                Project Archive_
+            </a>
+        </div>
+    </section>
+
+    
+    <section id="focus" class="pt-24 pb-16">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">/usr/bin/focus</h3>
+                <div class="w-24 h-1 bg-primary"></div>
+            </div>
+            <span class="text-[10px] font-mono text-gray-500 uppercase">3 NODES DETECTED</span>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <div class="lab-card">
+                <div class="text-primary text-xs font-mono mb-4">[ 01 ]</div>
+                <h4 class="text-xl font-bold mb-3 text-white">OPEN SOURCE</h4>
+                <p class="text-sm text-gray-400 font-mono leading-relaxed">
+                    Contributing to the ecosystem. I rely on, test, and occasionally patch the infrastructure tools I
+                    use daily.
+                </p>
+            </div>
+            
+            <div class="lab-card">
+                <div class="text-accent text-xs font-mono mb-4">[ 02 ]</div>
+                <h4 class="text-xl font-bold mb-3 text-white">AUTOMATION</h4>
+                <p class="text-sm text-gray-400 font-mono leading-relaxed">
+                    Eliminating manual toil. Using Python, Ansible, and Terraform to define environments as code.
+                </p>
+            </div>
+            
+            <div class="lab-card">
+                <div class="text-warning text-xs font-mono mb-4">[ 03 ]</div>
+                <h4 class="text-xl font-bold mb-3 text-white">HOME LAB</h4>
+                <p class="text-sm text-gray-400 font-mono leading-relaxed">
+                    Personal infrastructure. Running K8s, Proxmox, and self-hosted services for data ownership.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="projects" class="pt-24 pb-16">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">/var/log/projects</h3>
+                <div class="w-24 h-1 bg-accent"></div>
+            </div>
+            <span class="text-[10px] font-mono text-gray-500 uppercase">SYSTEM DEPLOYMENTS</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            
+
+            
+            <div class="lab-card group">
+                <h4 class="text-2xl font-bold mb-2 text-white group-hover:text-primary">
+                    Developer Issue Tracking Scheme -- DITS
+                </h4>
+
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    
+                    <span class="tech-spec">Backend: TypeScript w/Node.js</span>
+                    
+                    <span class="tech-spec">PostgreSQL</span>
+                    
+                    <span class="tech-spec">Redis</span>
+                    
+                    <span class="tech-spec">GraphQL &amp; REST</span>
+                    
+                    <span class="tech-spec">Frontend: React w/TypeScript</span>
+                    
+                    <span class="tech-spec">Build: Vite</span>
+                    
+                </div>
+                
+
+                <div class="text-sm text-gray-400 font-mono mb-6">
+                    <p>DITS (Developer Issue Tracking System) is a purpose-built issue tracker designed exclusively for individual software developers. It eliminates the &ldquo;collaboration tax&rdquo; of
+team-oriented tools by providing friction-less issue capture, sub-100ms interactions, and deep bidirectional Git integration, offering a keyboard-first,
+flow-state-optimized experience across web, desktop, mobile, and IDE platforms while ensuring complete data portability and user ownership.</p>
+
+                </div>
+
+                
+            </div>
+            
+        </div>
+    </section>
+
+    
+    <section id="blog" class="pt-24 pb-16">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">/home/notes</h3>
+                <div class="w-24 h-1 bg-warning"></div>
+            </div>
+            <span class="text-[10px] font-mono text-gray-500 uppercase">LAB_DATA_FEED</span>
+        </div>
+
+        
+        
+
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <a href="/blog/happy-new-year-2026/"
+                class="block p-6 bg-transparent border border-border relative overflow-hidden group hover:border-warning">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-warning scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                </div>
+
+                <p class="text-[10px] font-mono text-warning mb-4 uppercase tracking-[0.2em]">
+                    2026.01.01 // 2 MIN_READ
+                </p>
+
+                <h4 class="text-lg font-bold mb-4 text-white group-hover:text-warning transition-colors">
+                    Rebooting for 2026: Tracking Issues and Breaking New Ground
+                </h4>
+
+                <p class="text-xs text-gray-500 font-mono line-clamp-2 mb-6 uppercase">
+                    <h2 id="happy-new-year--2026">Happy New Year &ndash; 2026</h2>
+<p>Happy New Year! It has been a while since I last posted. I have been busy working on the DITS issue tracker application.</p>
+<p>I …</p>
+                </p>
+
+                <span class="text-[10px] font-mono text-gray-400 group-hover:text-white uppercase tracking-widest">
+                    [ READ_FULL_REPORT ]
+                </span>
+            </a>
+            
+            <a href="/blog/dits-origin/"
+                class="block p-6 bg-transparent border border-border relative overflow-hidden group hover:border-warning">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-warning scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                </div>
+
+                <p class="text-[10px] font-mono text-warning mb-4 uppercase tracking-[0.2em]">
+                    2025.11.16 // 2 MIN_READ
+                </p>
+
+                <h4 class="text-lg font-bold mb-4 text-white group-hover:text-warning transition-colors">
+                    DITS Origin
+                </h4>
+
+                <p class="text-xs text-gray-500 font-mono line-clamp-2 mb-6 uppercase">
+                    <p>One day awhile back, I was working on developing a blog application using Python and Django.  I came to a point where I needed to keep track of bugs, …</p>
+                </p>
+
+                <span class="text-[10px] font-mono text-gray-400 group-hover:text-white uppercase tracking-widest">
+                    [ READ_FULL_REPORT ]
+                </span>
+            </a>
+            
+            <a href="/blog/website-deployed/"
+                class="block p-6 bg-transparent border border-border relative overflow-hidden group hover:border-warning">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-warning scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                </div>
+
+                <p class="text-[10px] font-mono text-warning mb-4 uppercase tracking-[0.2em]">
+                    2025.11.08 // 2 MIN_READ
+                </p>
+
+                <h4 class="text-lg font-bold mb-4 text-white group-hover:text-warning transition-colors">
+                    Website Deployed
+                </h4>
+
+                <p class="text-xs text-gray-500 font-mono line-clamp-2 mb-6 uppercase">
+                    <p>Website deployed!  I finally have my own website; My own space on the web.  For the last few years, I have wanted to build a website to showcase
+the …</p>
+                </p>
+
+                <span class="text-[10px] font-mono text-gray-400 group-hover:text-white uppercase tracking-widest">
+                    [ READ_FULL_REPORT ]
+                </span>
+            </a>
+            
+        </div>
+
+        <div class="mt-12 text-center">
+            
+            <a href="/blog/"
+                class="inline-block px-6 py-3 border border-warning text-warning text-xs font-mono uppercase tracking-[0.3em] hover:bg-warning hover:text-black transition-all">
+                Access All Documentation
+            </a>
+            
+        </div>
+    </section>
+
+    
+    <section id="tech" class="pt-24 pb-16">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">/bin/env</h3>
+                <div class="w-24 h-1 bg-white"></div>
+            </div>
+            <span class="text-[10px] font-mono text-gray-500 uppercase">LOADED_MODULES</span>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+            <span class="tech-spec border-primary text-primary">Linux (Fedora KDE)</span>
+            <span class="tech-spec">Docker & Podman</span>
+            <span class="tech-spec border-accent text-accent">Kubernetes / K3s</span>
+            <span class="tech-spec">Ansible</span>
+            <span class="tech-spec border-primary text-primary">Python & Bash</span>
+            <span class="tech-spec">Terraform / IaC</span>
+            <span class="tech-spec border-accent text-accent">Prometheus & Grafana</span>
+            <span class="tech-spec">Git / GitHub Actions</span>
+            <span class="tech-spec border-primary text-primary">Proxmox / VMware</span>
+            <span class="tech-spec">Gitea</span>
+            <span class="tech-spec border-accent text-accent">Openmediavault</span>
+            <span class="tech-spec">Home Assistant</span>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="pt-24 pb-16">
+        <div class="lab-card max-w-4xl mx-auto border-accent/20">
+            <h3 class="text-3xl font-bold mb-6 text-white text-center">Establish Uplink</h3>
+            <p class="text-sm font-mono text-gray-400 mb-12 text-center uppercase tracking-widest leading-relaxed">
+                Discussion required? Automations failing? Trade expertise below.
+            </p>
+
+            <div class="flex justify-center flex-wrap gap-12">
+                
+                <a href="https://github.com/MickTheLinuxGeek"
+                    class="text-gray-500 hover:text-primary transition-colors flex flex-col items-center gap-2 group"
+                    aria-label="GitHub Profile">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.5.499.09.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.577.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span
+                        class="text-[10px] font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity">GitHub</span>
+                </a>
+                
+
+                
+                <a href="https://social.linux.pizza/@mickgeek"
+                    class="text-gray-500 hover:text-accent transition-colors flex flex-col items-center gap-2 group"
+                    aria-label="Mastodon Profile">
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.193 7.88c0-5.207-3.411-6.733-3.411-6.733C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.13.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.13.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.801.776-1.801 2.312v3.349h-2.483v-3.35c0-1.536-.601-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.833V8.284c0-1.289.328-2.313.987-3.07.679-.757 1.568-1.146 2.674-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.622-1.043c.64-.983 1.608-1.474 2.886-1.474 1.106 0 1.995.389 2.674 1.146.659.757.987 1.781.987 3.07v6.305z" />
+                    </svg>
+                    <span
+                        class="text-[10px] font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Mastodon</span>
+                </a>
+                
+
+                
+                <a href="https://bsky.app/profile/mickthelinuxgeek.bsky.social"
+                    class="text-gray-500 hover:text-warning transition-colors flex flex-col items-center gap-2 group"
+                    aria-label="Bluesky Profile">
+                    
+                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z" />
+                    </svg>
+                    <span
+                        class="text-[10px] font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Bluesky</span>
+                </a>
+                
+
+                
+                <a href="mailto:mickgeek@mickgeeklabs.org"
+                    class="text-gray-500 hover:text-primary transition-colors flex flex-col items-center gap-2 group"
+                    aria-label="Email Address">
+                    <span class="text-4xl text-inherit group-hover:animate-pulse">✉</span>
+                    <span
+                        class="text-[10px] font-mono tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-opacity">Email</span>
+                </a>
+                
+            </div>
+
+            <div class="mt-16 text-center border-t border-border pt-8 opacity-50">
+                <span class="text-[10px] font-mono uppercase tracking-[0.5em] text-gray-500">
+                    Transmission End // MickTheLinuxGeek
+                </span>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    </main>
+
+    
+    
+    
+<footer class="bg-bg-dark border-t border-border py-12 mt-24">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 container-padding">
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-left">
+            &copy; 2026 Michael Biel & MickGeekLabs<br>
+            <span class="text-gray-600">Built for personal infrastructure utility.</span>
+        </div>
+
+        <div class="flex gap-4">
+            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse [animation-delay:200ms]"></span>
+            <span class="w-2 h-2 bg-warning rounded-full animate-pulse [animation-delay:400ms]"></span>
+        </div>
+
+        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] text-center md:text-right">
+            LOC_LAT: 34.002060 N<br>
+            LOC_LONG: 81.042022 W
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

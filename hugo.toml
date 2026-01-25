@@ -14,7 +14,7 @@ pluralizeListTitles = false
 [params.social]
   github = "https://github.com/MickTheLinuxGeek"
   mastodon = "https://social.linux.pizza/@mickgeek"
-  bluesky = "https://bsky.app/profile/mickthelinuxgeek.bsky.social"
+  # bluesky = "https://bsky.app/profile/mickthelinuxgeek.bsky.social"
   email = "mickgeek@mickgeeklabs.org"
 
 [menu]

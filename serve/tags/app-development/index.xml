@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App Development on &lt;MickGeekLabs/&gt;</title>
+    <link>https://mickgeeklabs.org/tags/app-development/</link>
+    <description>Recent content in App Development on &lt;MickGeekLabs/&gt;</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Nov 2025 14:47:42 -0500</lastBuildDate>
+    <atom:link href="https://mickgeeklabs.org/tags/app-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DITS Origin</title>
+      <link>https://mickgeeklabs.org/blog/dits-origin/</link>
+      <pubDate>Sun, 16 Nov 2025 14:47:42 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/blog/dits-origin/</guid>
+      <description>&lt;p&gt;One day awhile back, I was working on developing a blog application using Python and Django.  I came to a point where I needed to keep track of bugs, issues, and&#xA;items that needed research.  How was I going to do this?  I could use GitHub issues, as I keep the project in a repository.  That would work fine, but I would have to&#xA;keep switching context from my IDE to GitHub issues.  Eventually I would need to start tracking issues on GitHub, but I felt where I was at in the development process,&#xA;that was not the way I wanted to go.  So, what I ended up doing was creating a project.its file and dumped issues and whatever else that needed researched into&#xA;it.  Although this worked, the file ended up being an unformatted mess and difficult to track issues, especially if there were a lot.  What was I going to do?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

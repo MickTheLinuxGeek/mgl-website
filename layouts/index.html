@@ -5,11 +5,13 @@
     <!-- 1. Hero Section -->
     <section id="about" class="pb-16 text-center sm:text-left relative">
         <div
-            class="absolute -top-10 -left-10 text-primary opacity-30 font-mono text-[10px] select-none uppercase tracking-[0.5em]">
-            SYSTEM_STATUS: ONLINE<br>
-            CORE_TEMP: OPTIMAL<br>
-            UPLINK: ACTIVE
-        </div><br>
+            class="absolute -top-10 -left-10 text-primary opacity-40 font-mono text-[10px] select-none uppercase tracking-[0.5em]">
+            SYSTEM_STATUS: <span id="status-val">ONLINE</span><br>
+            CORE_TEMP: <span id="temp-val">40.2</span>°C<br>
+            CPU_LOAD: <span id="cpu-val">12.5</span>%<br>
+            MEMORY: <span id="mem-val">4.2</span>GB / 16GB<br>
+            UPLINK: <span id="uplink-val">ACTIVE</span><br>
+        </div><br><br>
         <p class="text-sm font-mono text-accent mb-4 uppercase tracking-widest flex items-center gap-2">
             <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
             INITIATING: MickTheLinuxGeek
@@ -268,5 +270,52 @@
         </div>
     </section>
 
+    <script>
+        /**
+         * Lab Console Dynamic Metrics Controller
+         * Simulates real-time system feedback for aesthetic immersion.
+         */
+        (function () {
+            const metrics = {
+                status: document.getElementById('status-val'),
+                temp: document.getElementById('temp-val'),
+                cpu: document.getElementById('cpu-val'),
+                mem: document.getElementById('mem-val'),
+                uplink: document.getElementById('uplink-val')
+            };
+
+            if (!metrics.status) return;
+
+            const uplinks = ['ACTIVE', 'SYNCING', 'ENCRYPTED', 'PEERING'];
+
+            function updateMetrics() {
+                // Randomize temperature: 38.0 - 42.5
+                const temp = (Math.random() * 4.5 + 38).toFixed(1);
+                metrics.temp.textContent = temp;
+
+                // Randomize CPU: 5.0 - 28.0
+                const cpu = (Math.random() * 23 + 5).toFixed(1);
+                metrics.cpu.textContent = cpu;
+
+                // Randomize RAM: 4.1 - 4.8
+                const mem = (Math.random() * 0.7 + 4.1).toFixed(1);
+                metrics.mem.textContent = mem;
+
+                // Occasional Uplink shift
+                if (Math.random() > 0.8) {
+                    const randomUplink = uplinks[Math.floor(Math.random() * uplinks.length)];
+                    metrics.uplink.textContent = randomUplink;
+                }
+            }
+
+            // Run updates every 2.5 seconds with slight variance
+            function scheduleNext() {
+                updateMetrics();
+                setTimeout(scheduleNext, 2000 + Math.random() * 1500);
+            }
+
+            scheduleNext();
+        })();
+    </script>
 </main>
 {{ end }}

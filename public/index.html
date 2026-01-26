@@ -36,7 +36,7 @@
   
     
       
-        <link rel="stylesheet" href="/css/main.1b2f0723ce6a63a77a55361263812b451940f6692984bf6d4e45a828af645ff0.css" integrity="sha256-Gy8HI85qY6d6VTYSY4ErRRlA9mkphL9tTkWoKK9kX/A=" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/main.afc823475dcfc1463e3efe144e1bd3f2e3d15fd8a84e30c9fc26e9c52b4605b6.css" integrity="sha256-r8gjR13PwUY&#43;Pv4UThvT8uPRX9ioTjDJ/CbpxStGBbY=" crossorigin="anonymous">
       
     
   
@@ -210,11 +210,13 @@
     
     <section id="about" class="pb-16 text-center sm:text-left relative">
         <div
-            class="absolute -top-10 -left-10 text-primary opacity-30 font-mono text-[10px] select-none uppercase tracking-[0.5em]">
-            SYSTEM_STATUS: ONLINE<br>
-            CORE_TEMP: OPTIMAL<br>
-            UPLINK: ACTIVE
-        </div><br>
+            class="absolute -top-10 -left-10 text-primary opacity-40 font-mono text-[10px] select-none uppercase tracking-[0.5em]">
+            SYSTEM_STATUS: <span id="status-val">ONLINE</span><br>
+            CORE_TEMP: <span id="temp-val">40.2</span>°C<br>
+            CPU_LOAD: <span id="cpu-val">12.5</span>%<br>
+            MEMORY: <span id="mem-val">4.2</span>GB / 16GB<br>
+            UPLINK: <span id="uplink-val">ACTIVE</span><br>
+        </div><br><br>
         <p class="text-sm font-mono text-accent mb-4 uppercase tracking-widest flex items-center gap-2">
             <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
             INITIATING: MickTheLinuxGeek
@@ -513,6 +515,51 @@ flow-state-optimized experience across web, desktop, mobile, and IDE platforms w
         </div>
     </section>
 
+    <script>
+        
+
+        (function () {
+            const metrics = {
+                status: document.getElementById('status-val'),
+                temp: document.getElementById('temp-val'),
+                cpu: document.getElementById('cpu-val'),
+                mem: document.getElementById('mem-val'),
+                uplink: document.getElementById('uplink-val')
+            };
+
+            if (!metrics.status) return;
+
+            const uplinks = ['ACTIVE', 'SYNCING', 'ENCRYPTED', 'PEERING'];
+
+            function updateMetrics() {
+                
+                const temp = (Math.random() * 4.5 + 38).toFixed(1);
+                metrics.temp.textContent = temp;
+
+                
+                const cpu = (Math.random() * 23 + 5).toFixed(1);
+                metrics.cpu.textContent = cpu;
+
+                
+                const mem = (Math.random() * 0.7 + 4.1).toFixed(1);
+                metrics.mem.textContent = mem;
+
+                
+                if (Math.random() > 0.8) {
+                    const randomUplink = uplinks[Math.floor(Math.random() * uplinks.length)];
+                    metrics.uplink.textContent = randomUplink;
+                }
+            }
+
+            
+            function scheduleNext() {
+                updateMetrics();
+                setTimeout(scheduleNext, 2000 + Math.random() * 1500);
+            }
+
+            scheduleNext();
+        })();
+    </script>
 </main>
 
     </main>

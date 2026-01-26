@@ -1,9 +1,56 @@
 {{ define "main" }}
-  <div class="max-w-4xl mx-auto py-20 container-padding text-center">
-    <h1 class="text-6xl font-bold text-white mb-4">404</h1>
-    <p class="text-xl text-gray-400 mb-8">Page not found</p>
-    <a href="/" class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-indigo-700 transition">
-      Go Home
-    </a>
+<div class="max-w-5xl mx-auto py-12 sm:py-20 container-padding font-mono">
+  <div class="bg-black border-2 border-warning p-6 sm:p-10 shadow-[0_0_30px_rgba(255,184,0,0.1)] relative">
+    <!-- Decoration bits -->
+    <div class="absolute top-2 right-4 text-[10px] text-warning/50 select-none">
+      ERROR_CODE: 0x00000404<br>
+      MODULE: VFS_MOUNT_FAILED
+    </div>
+
+    <div class="space-y-2 text-xs sm:text-sm text-gray-400">
+      <p class="text-warning font-bold animate-pulse">[ 0.000000] CRITICAL_SYSTEM_ERROR: Kernel panic - not syncing:
+        VFS: Unable to mount root fs on unknown-block(0,0)</p>
+      <p>[ 0.000004] CPU: 0 PID: 0 Comm: swapper Not tainted 6.1.0-mgl-lab #1</p>
+      <p>[ 0.000007] Hardware name: MickGeekLabs_HomeLab_v2 (Proxmox KVM)</p>
+      <p>[ 0.000010] Call Trace:</p>
+      <p>[ 0.000012] &lt;TASK&gt;</p>
+      <p>[ 0.000015] dump_stack_lvl+0x44/0x5c</p>
+      <p>[ 0.000018] panic+0x118/0x2c4</p>
+      <p>[ 0.000021] mount_block_root+0x12c/0x1e8</p>
+      <p>[ 0.000024] prepare_namespace+0x134/0x168</p>
+      <p>[ 0.000027] kernel_init_freeable+0x280/0x2a4</p>
+      <p>[ 0.000030] rest_init+0xd0/0xd0</p>
+      <p>[ 0.000032] &lt;/TASK&gt;</p>
+      <p class="pt-4">[ 0.000035] Kernel Offset: disabled</p>
+      <p>[ 0.000038] ---[ end Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0) ]---</p>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-warning/20">
+      <h1 class="text-3xl sm:text-5xl font-black text-white mb-6 uppercase tracking-tighter">
+        Request_Fault: <span class="text-warning">404</span>
+      </h1>
+      <p class="text-gray-500 mb-10 max-w-xl">
+        The requested resource located at <code class="bg-white/5 px-2 py-1 text-primary">{{ .RelPermalink }}</code>
+        could not be mapped into memory. The address is either invalid or has been purged from the archive.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="/"
+          class="group relative px-8 py-4 bg-warning text-black font-bold uppercase tracking-tighter hover:bg-white transition-all duration-300">
+          <span class="relative z-10">INIT_RECOVERY_SECTOR_0 >></span>
+          <span
+            class="absolute inset-0 bg-white translate-x-1 translate-y-1 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></span>
+        </a>
+        <button onclick="window.history.back()"
+          class="px-8 py-4 border border-border text-gray-500 font-bold uppercase tracking-tighter hover:border-accent hover:text-accent transition-all">
+          Term_Session (Back)
+        </button>
+      </div>
+    </div>
   </div>
-  {{ end }}
+
+  <div class="mt-8 text-center">
+    <p class="text-[10px] text-gray-600 uppercase tracking-[0.5em]">SYSTEM_HALTED // MANUAL_INTERVENTION_REQUIRED</p>
+  </div>
+</div>
+{{ end }}

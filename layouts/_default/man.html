@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto py-12 sm:py-20 container-padding font-mono text-gray-300">
+    <div class="man-page-container bg-black/80 p-8 sm:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
+
+        <!-- CRT Scanline Effect (Specific to Man Page) -->
+        <div
+            class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]">
+        </div>
+
+        <!-- Man Header -->
+        <div class="flex justify-between items-center mb-12 border-b border-gray-800 pb-4">
+            <span class="text-sm font-bold text-white uppercase tracking-widest">MICK(1)</span>
+            <span class="text-xs text-gray-500 uppercase">MickGeekLabs Manual</span>
+            <span class="text-sm font-bold text-white uppercase tracking-widest">MICK(1)</span>
+        </div>
+
+        <!-- Man Content -->
+        <div class="man-content space-y-12">
+            {{ .Content }}
+        </div>
+
+        <!-- Man Footer -->
+        <div class="mt-20 pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+            <span>MGL-OS 2.4.0</span>
+            <span>{{ now.Format "2006-01-02" }}</span>
+            <span class="uppercase">MICK(1)</span>
+        </div>
+    </div>
+</div>
+
+{{ end }}

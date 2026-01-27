@@ -51,6 +51,13 @@
       <description>&lt;p&gt;Well here it is.  I finally built my first website, my own place on the internet.&#xA;I have always wanted to build a blog and post interesting stuff, but could never find a good way to accomplish this.  I have tried building Hugo sites before, but&#xA;it never worked out.  I tried using one of Hugo&amp;rsquo;s themes, but trying to modify one of those to suit my needs turned into a nightmare.  Well, here I am again using&#xA;Hugo to build a website and a blog, this time with the help of AI.  Starting from a blank slate or trying to use one of Hugo&amp;rsquo;s themes just didn&amp;rsquo;t work for me.  If I&#xA;can get something I like to start with, then I have no problem taking off from there.  What I have so far looks good and I like it.  This is a work in progress and I&amp;rsquo;ll&#xA;be making changes as I go along.  I&amp;rsquo;ll see how it goes.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>MICK(1)</title>
+      <link>https://mickgeeklabs.org/man/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mickgeeklabs.org/man/</guid>
+      <description>&lt;h2 id=&#34;name&#34;&gt;NAME&lt;/h2&gt;&#xA;&lt;p&gt;mickgeeklabs - personal portal and technical lab logs of Michael Biel&lt;/p&gt;&#xA;&lt;h2 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; [&amp;ndash;about] [&amp;ndash;projects] [&amp;ndash;feed] [&amp;ndash;search]&lt;/p&gt;&#xA;&lt;h2 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; is a custom-built static site designed to simulate an industrial laboratory console. It serves as a central hub for documenting engineering projects, infrastructure automation, and home lab research.&lt;/p&gt;&#xA;&lt;p&gt;The interface utilizes a low-light, high-contrast palette optimized for technical deep-dives and late-night tinkering.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>RSS Feeds</title>
       <link>https://mickgeeklabs.org/rss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

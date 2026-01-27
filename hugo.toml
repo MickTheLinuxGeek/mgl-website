@@ -47,9 +47,13 @@ pluralizeListTitles = false
     url = "/search/"
     weight = 70
   [[menu.main]]
+    name = "Man Page"
+    url = "/man/"
+    weight = 80
+  [[menu.main]]
     name = "RSS Feed"
     url = "/rss/"
-    weight = 80
+    weight = 90
 
 # hugo.toml
 [build]

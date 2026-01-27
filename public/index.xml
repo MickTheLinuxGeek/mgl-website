@@ -57,5 +57,12 @@
       <guid>https://mickgeeklabs.org/rss/</guid>
       <description>&lt;p&gt;Subscribe to updates from MickGeekLabs using RSS feeds.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Search</title>
+      <link>https://mickgeeklabs.org/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mickgeeklabs.org/search/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

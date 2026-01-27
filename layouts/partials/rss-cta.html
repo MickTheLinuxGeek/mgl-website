@@ -1,0 +1,49 @@
+<section class="mt-16 pt-8 border-t border-gray-800">
+    <div class="lab-card rss-cta-card overflow-hidden bg-black/40 border border-gray-800 rounded-lg backdrop-blur-sm">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-4 py-2 border-b border-gray-800 bg-white/5">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="text-[10px] sm:text-xs font-mono text-gray-400 uppercase tracking-tighter">BROADCAST_UPLINK
+                    // PROTOCOL: RSS_2.0</span>
+            </div>
+            <span class="text-[10px] font-mono text-gray-500 uppercase">STATUS: READY</span>
+        </div>
+
+        <!-- Body -->
+        <div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div class="flex-1">
+                <h3 class="text-lg font-bold text-white mb-2 font-mono">INITIALIZE DATA SYNC?</h3>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                    Subscribe to the <code class="text-accent bg-accent/10 px-1 rounded text-xs">mgl-feed</code> for
+                    automated briefings on engineering projects, technical research, and lab updates.
+                </p>
+            </div>
+
+            <div class="shrink-0">
+                <a href="{{ "/index.xml" | relURL }}"
+                    class="group relative inline-flex items-center gap-3 px-8 py-3 bg-accent/10 hover:bg-accent text-accent hover:text-black font-mono text-sm font-bold border border-accent/30 rounded transition-all duration-300 overflow-hidden"
+                    aria-label="Subscribe to RSS Feed">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.199 24C19.199 13.407 10.593 4.8 0 4.8V0c13.255 0 24 10.745 24 24h-4.801zM0 21.001c1.657 0 3 1.343 3 3H0v-3zm0-8.501c6.351 0 11.5 5.148 11.5 11.5H8.501c0-4.694-3.807-8.501-8.501-8.501v-3z" />
+                        </svg>
+                        [ CONNECT_STREAM ]
+                    </span>
+                    <!-- Border glow effect on hover -->
+                    <div
+                        class="absolute inset-0 bg-accent/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- System Logs Footer (Aesthetic Only) -->
+        <div
+            class="px-4 py-1.5 border-t border-gray-800 bg-white/2 text-[9px] font-mono text-gray-500 flex justify-between">
+            <span>TRANS_LOG: CHANNEL_ESTABLISHED</span>
+            <span class="hidden sm:inline">LAST_BURST: {{ now.Format "2006.01.02 15:04" }}</span>
+        </div>
+    </div>
+</section>

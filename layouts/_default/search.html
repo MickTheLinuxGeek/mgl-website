@@ -1,0 +1,81 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto py-12 sm:py-20 container-padding">
+    <header class="mb-12">
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">Terminal Search</h1>
+        <p class="text-gray-400 text-lg">Query the MickGeekLabs knowledge base.</p>
+    </header>
+
+    <div class="lab-card p-6 sm:p-8 bg-black/40 border-gray-800 rounded-xl backdrop-blur-sm">
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js"></script>
+        <div id="search" class="search-container"></div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                new PagefindUI({
+                    element: "#search",
+                    showSubResults: true,
+                    translations: {
+                        placeholder: "Enter search query..."
+                    },
+                    baseUrl: "/"
+                });
+            });
+        </script>
+    </div>
+
+    <style>
+        :root {
+            --pagefind-ui-primary: var(--accent);
+            --pagefind-ui-text: #d1d5db;
+            --pagefind-ui-background: transparent;
+            --pagefind-ui-border: #374151;
+            --pagefind-ui-tag: #1f2937;
+            --pagefind-ui-border-width: 1px;
+            --pagefind-ui-border-radius: 8px;
+            --pagefind-ui-image-border-radius: 8px;
+            --pagefind-ui-image-box-ratio: 1 / 1;
+            --pagefind-ui-font: inherit;
+        }
+
+        .search-container {
+            width: 100%;
+        }
+
+        .pagefind-ui__search-input {
+            background-color: rgba(17, 24, 39, 0.5) !important;
+            border: 1px solid #374151 !important;
+            color: #fff !important;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+        }
+
+        .pagefind-ui__search-input:focus {
+            border-color: var(--accent) !important;
+            outline: none !important;
+            box-shadow: 0 0 0 1px var(--accent) !important;
+        }
+
+        .pagefind-ui__result-title {
+            color: #fff !important;
+            font-weight: 600 !important;
+        }
+
+        .pagefind-ui__result-link {
+            color: var(--accent) !important;
+            text-decoration: none !important;
+        }
+
+        .pagefind-ui__result-link:hover {
+            text-decoration: underline !important;
+        }
+
+        .pagefind-ui__result-excerpt {
+            color: #9ca3af !important;
+        }
+
+        .pagefind-ui__message {
+            color: #6b7280 !important;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+        }
+    </style>
+</div>
+{{ end }}

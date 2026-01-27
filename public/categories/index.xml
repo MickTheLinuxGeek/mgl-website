@@ -6,8 +6,22 @@
     <description>Recent content in Categories on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jan 2026 21:12:15 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 14:45:54 -0500</lastBuildDate>
     <atom:link href="https://mickgeeklabs.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Development</title>
+      <link>https://mickgeeklabs.org/categories/development/</link>
+      <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/categories/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Updates</title>
+      <link>https://mickgeeklabs.org/categories/updates/</link>
+      <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/categories/updates/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dev Log</title>
       <link>https://mickgeeklabs.org/categories/dev-log/</link>

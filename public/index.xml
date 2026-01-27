@@ -6,8 +6,15 @@
     <description>Recent content on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jan 2026 21:12:15 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 14:45:54 -0500</lastBuildDate>
     <atom:link href="https://mickgeeklabs.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recent Website Enhancements: Lab Console, Search, and Man Pages</title>
+      <link>https://mickgeeklabs.org/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</link>
+      <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Over the last few days, I&amp;rsquo;ve been focusing on bringing a more &amp;ldquo;Industrial Lab&amp;rdquo; and terminal-centric feel to the MickTheLinuxGeek website. This dev log summarizes the last three major updates merged into the codebase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-dynamic-lab-console--custom-404-page-pr-3&#34;&gt;1. Dynamic Lab Console &amp;amp; Custom 404 Page (PR #3)&lt;/h2&gt;&#xA;&lt;p&gt;The first major update introduced a dynamic &lt;strong&gt;Lab Console&lt;/strong&gt; component. This component is designed to emulate a terminal-like interface directly on the home page, providing an interactive feel from the moment a visitor arrives.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DITS Development Update: Keyboard Navigation, Drag-and-Drop, and Improved Testing</title>
       <link>https://mickgeeklabs.org/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</link>

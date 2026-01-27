@@ -3,13 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mickgeeklabs.org/</loc>
-    <lastmod>2026-01-24T21:12:15-05:00</lastmod>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/blog/</loc>
-    <lastmod>2026-01-24T21:12:15-05:00</lastmod>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/categories/</loc>
-    <lastmod>2026-01-24T21:12:15-05:00</lastmod>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/categories/development/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/tags/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/categories/updates/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/tags/updates/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
+  </url><url>
+    <loc>https://mickgeeklabs.org/tags/website/</loc>
+    <lastmod>2026-01-27T14:45:54-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/categories/dev-log/</loc>
     <lastmod>2026-01-24T21:12:15-05:00</lastmod>
@@ -24,9 +42,6 @@
     <lastmod>2026-01-24T21:12:15-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</loc>
-    <lastmod>2026-01-24T21:12:15-05:00</lastmod>
-  </url><url>
-    <loc>https://mickgeeklabs.org/tags/</loc>
     <lastmod>2026-01-24T21:12:15-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/tags/buildinpublic/</loc>
@@ -60,9 +75,6 @@
     <lastmod>2025-11-16T14:47:42-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/tags/hugo/</loc>
-    <lastmod>2025-11-08T20:04:54-05:00</lastmod>
-  </url><url>
-    <loc>https://mickgeeklabs.org/tags/website/</loc>
     <lastmod>2025-11-08T20:04:54-05:00</lastmod>
   </url><url>
     <loc>https://mickgeeklabs.org/blog/website-deployed/</loc>

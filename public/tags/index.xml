@@ -6,8 +6,22 @@
     <description>Recent content in Tags on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jan 2026 21:12:15 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 14:45:54 -0500</lastBuildDate>
     <atom:link href="https://mickgeeklabs.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Updates</title>
+      <link>https://mickgeeklabs.org/tags/updates/</link>
+      <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/tags/updates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website</title>
+      <link>https://mickgeeklabs.org/tags/website/</link>
+      <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/tags/website/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DevLog</title>
       <link>https://mickgeeklabs.org/tags/devlog/</link>
@@ -83,13 +97,6 @@
       <link>https://mickgeeklabs.org/tags/hugo/</link>
       <pubDate>Sat, 08 Nov 2025 20:04:54 -0500</pubDate>
       <guid>https://mickgeeklabs.org/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Website</title>
-      <link>https://mickgeeklabs.org/tags/website/</link>
-      <pubDate>Sat, 08 Nov 2025 20:04:54 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/tags/website/</guid>
       <description></description>
     </item>
   </channel>

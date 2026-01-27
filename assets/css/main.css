@@ -115,6 +115,52 @@
     @apply border-accent;
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
   }
+
+  /* Man Page Styles */
+  .man-content h2 {
+    @apply text-white text-base font-bold uppercase mb-4 mt-8 flex items-center gap-2;
+    letter-spacing: 0.1em;
+  }
+
+  .man-content h2::before {
+    content: "";
+    @apply w-1 h-4 bg-primary inline-block;
+  }
+
+  .man-content p {
+    @apply pl-6 mb-4 text-sm leading-relaxed text-gray-400;
+    max-width: 65ch;
+  }
+
+  .man-content ul {
+    @apply pl-12 mb-6 space-y-2;
+  }
+
+  .man-content li {
+    @apply text-sm text-gray-400 relative;
+  }
+
+  .man-content li::before {
+    content: "•";
+    @apply absolute -left-4 text-primary;
+  }
+
+  .man-content strong {
+    @apply text-white font-bold;
+  }
+
+  .man-content code {
+    @apply bg-white/5 px-1.5 py-0.5 rounded text-accent text-xs border border-white/10;
+  }
+
+  .man-page-container::after {
+    content: "Manual page mick(1) line 1 (press q to quit, h for help)";
+    @apply absolute bottom-0 left-0 right-0 bg-white text-black text-[10px] px-2 py-0.5 opacity-0 transition-opacity duration-300 pointer-events-none;
+  }
+
+  .man-page-container:hover::after {
+    @apply opacity-100;
+  }
 }
 
 /* Custom Scrollbar */

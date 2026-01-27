@@ -106,6 +106,15 @@
   .tech-spec {
     @apply px-3 py-1 bg-transparent border border-gray-600 text-[10px] font-mono rounded-none uppercase tracking-widest text-gray-400;
   }
+
+  .rss-cta-card::before {
+    display: none;
+  }
+
+  .rss-cta-card:hover {
+    @apply border-accent;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  }
 }
 
 /* Custom Scrollbar */

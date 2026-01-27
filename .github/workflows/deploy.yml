@@ -34,6 +34,9 @@ jobs:
         run: hugo --minify
         # The hugo command generates the static files into the 'public/' directory
 
+      - name: 🔍 Index with Pagefind
+        run: npx pagefind --site public
+
       - name: 🚀 Deploy to FTP Server
         # Use a community action designed for FTP deployment
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6

@@ -43,6 +43,10 @@ pluralizeListTitles = false
     url = "#contact"
     weight = 60
   [[menu.main]]
+    name = "Now"
+    url = "/now/"
+    weight = 65
+  [[menu.main]]
     name = "Search"
     url = "/search/"
     weight = 70

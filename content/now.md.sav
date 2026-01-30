@@ -1,0 +1,38 @@
+---
+title: "PROCESS_MONITOR"
+layout: "now"
+processes:
+  - pid: 1402
+    user: mick
+    cpu: 18.2
+    mem: 5.4
+    command: "LAB_UPGRADE: Refining website aesthetic"
+    time: "25:42"
+  - pid: 104
+    user: mickthelinuxgeek
+    cpu: 2.1
+    mem: 12.8
+    res: "4.2G"
+    state: "S"
+    command: "DITS: Developer Issue Tracker System"
+    time: "720:15"
+  - pid: 88
+    user: builder
+    cpu: 92.4
+    mem: 1.2
+    res: "256M"
+    command: "CI_PIPELINE: GitHub Deploy Workflow"
+    time: "03:12"
+  - pid: 219
+    user: mick
+    cpu: 0.5
+    mem: 3.1
+    command: "BLOG_DRAFT: Exploring Tailwind v4"
+    time: "12:05"
+  - pid: 42
+    user: root
+    cpu: 0.1
+    mem: 0.1
+    command: "INIT: MickGeekLabs Gateway"
+    time: "9999:59"
+---

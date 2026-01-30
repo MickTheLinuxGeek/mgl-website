@@ -65,6 +65,13 @@
       <description>&lt;h2 id=&#34;name&#34;&gt;NAME&lt;/h2&gt;&#xA;&lt;p&gt;mickgeeklabs - personal portal and technical lab logs of Michael Biel&lt;/p&gt;&#xA;&lt;h2 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; [&amp;ndash;about] [&amp;ndash;projects] [&amp;ndash;feed] [&amp;ndash;search]&lt;/p&gt;&#xA;&lt;h2 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; is a custom-built static site designed to simulate an industrial laboratory console. It serves as a central hub for documenting engineering projects, infrastructure automation, and home lab research.&lt;/p&gt;&#xA;&lt;p&gt;The interface utilizes a low-light, high-contrast palette optimized for technical deep-dives and late-night tinkering.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>PROCESS_MONITOR</title>
+      <link>https://mickgeeklabs.org/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mickgeeklabs.org/now/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>RSS Feeds</title>
       <link>https://mickgeeklabs.org/rss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

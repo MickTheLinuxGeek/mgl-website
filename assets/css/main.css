@@ -161,6 +161,24 @@
   .man-page-container:hover::after {
     @apply opacity-100;
   }
+
+  /* htop / Process Monitor Styles */
+  .htop-container {
+    /* Terminal vibe with internal glow */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8), 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .htop-container table tr {
+    @apply border-b border-gray-900/50 last:border-0;
+  }
+
+  .htop-container thead th {
+    @apply border-r border-gray-800 last:border-0;
+  }
+
+  .segment {
+    transition: opacity 0.3s ease;
+  }
 }
 
 /* Custom Scrollbar */

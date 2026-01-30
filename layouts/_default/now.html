@@ -1,0 +1,149 @@
+{{ define "main" }}
+<div class="max-w-6xl mx-auto py-12 sm:py-20 container-padding font-mono text-gray-300">
+    <div
+        class="htop-container bg-black p-4 sm:p-6 border border-gray-800 shadow-2xl relative overflow-hidden text-xs sm:text-sm">
+
+        <!-- CRT Scanline Effect (Specific to Terminal) -->
+        <div
+            class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]">
+        </div>
+
+        <!-- System Status Header -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-8 border-b border-gray-900 pb-6">
+            <!-- Left Side: Meters -->
+            <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                    <span class="w-8 text-white">CPU</span>
+                    <div class="flex-1 h-3 flex items-center border border-gray-800 px-1">
+                        <div class="flex-1 flex gap-0.5">
+                            {{ range seq 20 }}
+                            <span class="segment w-full h-full bg-primary opacity-80 animate-pulse"
+                                style="animation-delay: {{ mul . 0.1 }}s"></span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <span class="w-12 text-right text-primary">54.2%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-8 text-white">Mem</span>
+                    <div class="flex-1 h-3 flex items-center border border-gray-800 px-1">
+                        <div class="flex-1 flex gap-0.5">
+                            {{ range seq 10 }}
+                            <span class="w-full h-full bg-accent opacity-80"></span>
+                            {{ end }}
+                            {{ range seq 10 }}
+                            <span class="w-full h-full bg-gray-900"></span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <span class="w-12 text-right text-accent">5.1G/16G</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-8 text-white">Swp</span>
+                    <div class="flex-1 h-3 flex items-center border border-gray-800 px-1">
+                        <div class="flex-1 flex gap-0.5">
+                            <span class="w-1/20 h-full bg-warning opacity-80"></span>
+                            {{ range seq 19 }}
+                            <span class="w-full h-full bg-gray-900"></span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <span class="w-12 text-right text-warning">20M/2G</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Metrics -->
+            <div class="lg:text-right space-y-1">
+                <div><span class="text-white">Tasks:</span> 42 total, 2 running, 40 sleeping</div>
+                <div><span class="text-white">Load average:</span> <span class="text-primary">0.12</span> 0.25 0.45
+                </div>
+                <div><span class="text-white">Uptime:</span> <span id="uptime-clock">0 days, 00:00:00</span></div>
+                <div class="text-xs text-gray-600 mt-2 uppercase tracking-tighter">System: MGL-LAB-OS-2.4 // {{
+                    now.Format "15:04:05" }}</div>
+            </div>
+        </div>
+
+        <!-- Process Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left">
+                <thead>
+                    <tr class="bg-white text-black text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                        <th class="py-1 px-2">PID</th>
+                        <th class="py-1 px-2">USER</th>
+                        <th class="py-1 px-2">PR</th>
+                        <th class="py-1 px-2">NI</th>
+                        <th class="py-1 px-2">VIRT</th>
+                        <th class="py-1 px-2">RES</th>
+                        <th class="py-1 px-2">SHR</th>
+                        <th class="py-1 px-2">S</th>
+                        <th class="py-1 px-2">%CPU</th>
+                        <th class="py-1 px-2">%MEM</th>
+                        <th class="py-1 px-2">TIME+</th>
+                        <th class="py-1 px-2">COMMAND</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-900">
+                    {{ range .Params.processes }}
+                    <tr class="hover:bg-white/5 transition-colors group">
+                        <td class="py-1 px-2 text-gray-500">{{ .pid }}</td>
+                        <td class="py-1 px-2 text-accent">{{ .user }}</td>
+                        <td class="py-1 px-2">20</td>
+                        <td class="py-1 px-2">0</td>
+                        <td class="py-1 px-2 text-gray-600">12.4G</td>
+                        <td class="py-1 px-2 text-gray-500">{{ .res | default "1.2G" }}</td>
+                        <td class="py-1 px-2 text-gray-600">0.5G</td>
+                        <td class="py-1 px-2 text-primary">{{ .state | default "R" }}</td>
+                        <td class="py-1 px-2 text-white font-bold">{{ .cpu }}</td>
+                        <td class="py-1 px-2 text-white font-bold">{{ .mem }}</td>
+                        <td class="py-1 px-2 text-gray-500">{{ .time }}</td>
+                        <td class="py-1 px-2 group-hover:text-primary transition-colors text-white font-bold">{{
+                            .command }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Terminal Footer -->
+        <div class="mt-8 pt-4 border-t border-gray-900 flex flex-wrap gap-4 text-[10px] sm:text-xs">
+            <span class="flex gap-1 items-center"><span class="bg-white text-black px-1 font-bold">F1</span> Help</span>
+            <span class="flex gap-1 items-center"><span class="bg-white text-black px-1 font-bold">F2</span>
+                Setup</span>
+            <span class="flex gap-1 items-center"><span class="bg-white text-black px-1 font-bold">F3</span>
+                Search</span>
+            <span class="flex gap-1 items-center"><span class="bg-white text-black px-1 font-bold">F4</span>
+                Filter</span>
+            <span class="flex gap-1 items-center"><span class="bg-white text-black px-1 font-bold">F10</span>
+                Quit</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    /**
+     * Uptime Clock Simulation
+     */
+    (function () {
+        const uptimeEl = document.getElementById('uptime-clock');
+        if (!uptimeEl) return;
+
+        let startTime = Date.now() - (12 * 24 * 60 * 60 * 1000) - (4 * 60 * 60 * 1000) - (22 * 60 * 1000);
+
+        function updateClock() {
+            const now = Date.now();
+            const diff = now - startTime;
+
+            const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+            const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+            const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
+            const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+
+            uptimeEl.innerText = `${days} days, ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    })();
+</script>
+
+{{ end }}

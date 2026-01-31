@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# MickGeekLabs LOG_EMITTER
+# Automates the creation of log entries for the activity aggregator.
+
+CONTENT_DIR="content/logs"
+DATE=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+FILE_DATE=$(date +"%Y-%m-%d-%H%M%S")
+SEVERITY="INFO"
+CATEGORY="GENERAL"
+SUMMARY=""
+
+usage() {
+    echo "Usage: $0 [-s severity] [-c category] -m \"summary message\""
+    echo ""
+    echo "Options:"
+    echo "  -s  Severity: SUCCESS, INFO, WARN, EVENT, DEBUG (Default: INFO)"
+    echo "  -c  Category: e.g., NODE_SYNC, LAB_UPGRADE, SYS_EVENT (Default: GENERAL)"
+    echo "  -m  Summary: The one-line log message (Required)"
+    echo "  -h  Show this help menu"
+    exit 1
+}
+
+# Parse flags
+while getopts "s:c:m:h" opt; do
+    case ${opt} in
+        s ) SEVERITY=$OPTARG ;;
+        c ) CATEGORY=$OPTARG ;;
+        m ) SUMMARY=$OPTARG ;;
+        h ) usage ;;
+        \? ) usage ;;
+    esac
+done
+
+if [ -z "$SUMMARY" ]; then
+    echo "Error: Summary message (-m) is required."
+    usage
+fi
+
+FILENAME="${CONTENT_DIR}/log-${FILE_DATE}.md"
+
+# Create log entry
+cat <<EOF > "$FILENAME"
+---
+date: ${DATE}
+severity: "${SEVERITY^^}"
+category: "${CATEGORY^^}"
+summary: "${SUMMARY}"
+---
+EOF
+
+echo "Log emitted successfully: ${FILENAME}"
+echo "  [${SEVERITY^^}] ${SUMMARY}"

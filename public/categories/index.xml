@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on &lt;MickGeekLabs/&gt;</title>
-    <link>https://mickgeeklabs.org/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jan 2026 14:45:54 -0500</lastBuildDate>
-    <atom:link href="https://mickgeeklabs.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
-      <link>https://mickgeeklabs.org/categories/development/</link>
+      <link>http://localhost:1313/categories/development/</link>
       <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/categories/development/</guid>
+      <guid>http://localhost:1313/categories/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Updates</title>
-      <link>https://mickgeeklabs.org/categories/updates/</link>
+      <link>http://localhost:1313/categories/updates/</link>
       <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/categories/updates/</guid>
+      <guid>http://localhost:1313/categories/updates/</guid>
       <description></description>
     </item>
     <item>
       <title>Dev Log</title>
-      <link>https://mickgeeklabs.org/categories/dev-log/</link>
+      <link>http://localhost:1313/categories/dev-log/</link>
       <pubDate>Sat, 24 Jan 2026 21:12:15 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/categories/dev-log/</guid>
+      <guid>http://localhost:1313/categories/dev-log/</guid>
       <description></description>
     </item>
     <item>
       <title>DITS</title>
-      <link>https://mickgeeklabs.org/categories/dits/</link>
+      <link>http://localhost:1313/categories/dits/</link>
       <pubDate>Sat, 24 Jan 2026 21:12:15 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/categories/dits/</guid>
+      <guid>http://localhost:1313/categories/dits/</guid>
       <description></description>
     </item>
   </channel>

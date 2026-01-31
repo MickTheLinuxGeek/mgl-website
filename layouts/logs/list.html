@@ -1,0 +1,72 @@
+{{ define "main" }}
+<div class="max-w-5xl mx-auto py-12 sm:py-20 container-padding font-mono text-gray-300">
+    <div
+        class="log-aggregator-window bg-black border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col h-[70vh] sm:h-[80vh]">
+
+        <!-- Terminal Header -->
+        <div
+            class="bg-gray-900 px-4 py-2 flex items-center justify-between border-b border-gray-800 text-[10px] uppercase tracking-widest text-gray-500">
+            <div class="flex gap-4">
+                <span>FILE: /var/log/mgl_activity</span>
+                <span class="hidden sm:inline">USER: mick</span>
+            </div>
+            <div class="flex gap-2">
+                <span class="text-primary">RUNNING: tail -f</span>
+                <span class="hidden sm:inline">REV: {{ now.Format "2006.01.02" }}</span>
+            </div>
+        </div>
+
+        <!-- Log Stream Body -->
+        <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-2 log-stream-body scrollbar-thin">
+            {{ $stream := where .Site.RegularPages "Section" "in" (slice "blog" "logs") }}
+            {{ range $index, $item := $stream.ByDate.Reverse }}
+            <div class="log-entry flex flex-wrap gap-x-3 gap-y-1 items-baseline opacity-0"
+                style="animation-delay: {{ mul $index 0.05 }}s; animation-fill-mode: forwards;">
+                <!-- Timestamp -->
+                <span class="text-gray-600 shrink-0 text-xs sm:text-sm">[{{ $item.Date.Format "Jan 02 15:04" }}]</span>
+
+                <!-- Severity/Badge -->
+                {{ $sev := $item.Params.severity | default "INFO" }}
+                {{ if eq $item.Section "blog" }}{{ $sev = "BLOG_ENTRY" }}{{ end }}
+
+                <span class="px-1 py-0.5 text-[10px] sm:text-xs font-bold shrink-0 
+                        {{ if eq $sev " SUCCESS" }}text-primary{{ end }} {{ if eq $sev "INFO" }}text-accent{{ end }} {{
+                    if eq $sev "WARN" }}text-warning{{ end }} {{ if eq $sev "EVENT" }}text-secondary{{ end }} {{ if eq
+                    $sev "BLOG_ENTRY" }}text-white bg-white/10{{ end }} border {{ if eq $sev "BLOG_ENTRY"
+                    }}border-white/20{{ else }}border-current{{ end }}">
+                    [{{ $sev }}]
+                </span>
+
+                <!-- Message -->
+                <span class="flex-1 text-xs sm:text-sm {{ if eq .Section " blog" }}text-accent font-bold{{ else
+                    }}text-gray-300{{ end }}">
+                    {{ if eq .Section "blog" }}
+                    <a href="{{ .Permalink }}" class="hover:underline">NEW_UPLINK: {{ .Title }}</a>
+                    {{ else }}
+                    {{ .Params.summary }}
+                    {{ end }}
+                </span>
+
+                <!-- Category (Optional) -->
+                {{ if .Params.category }}
+                <span class="text-[10px] text-gray-700 hidden lg:inline">// {{ .Params.category }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            <!-- Interactive Prompt -->
+            <div class="pt-4 flex items-center gap-2 text-primary opacity-80">
+                <span class="text-xs sm:text-sm">mick@mgl-lab:~$</span>
+                <span class="text-xs sm:text-sm">tail -f /activity_stream</span>
+                <span class="w-2 h-4 bg-primary animate-pulse mgl-cursor"></span>
+            </div>
+        </div>
+
+        <!-- Scroll Shadow Indicators -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-12 pointer-events-none bg-gradient-to-t from-black to-transparent opacity-60">
+        </div>
+    </div>
+</div>
+
+{{ end }}

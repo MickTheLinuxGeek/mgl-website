@@ -2,87 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>&lt;MickGeekLabs/&gt;</title>
-    <link>https://mickgeeklabs.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jan 2026 14:45:54 -0500</lastBuildDate>
-    <atom:link href="https://mickgeeklabs.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 10:52:04 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/logs/log-2026-01-31-105204/</link>
+      <pubDate>Sat, 31 Jan 2026 10:52:04 -0500</pubDate>
+      <guid>http://localhost:1313/logs/log-2026-01-31-105204/</guid>
+      <description>CLI Loganalyzer successfully deployed to lab node.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/logs/log-2026-01-30-01/</link>
+      <pubDate>Fri, 30 Jan 2026 16:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/logs/log-2026-01-30-01/</guid>
+      <description>Integrated PROCESS_MONITOR dashboard module into core navigation layer.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/logs/log-2026-01-30-02/</link>
+      <pubDate>Fri, 30 Jan 2026 10:22:00 +0000</pubDate>
+      <guid>http://localhost:1313/logs/log-2026-01-30-02/</guid>
+      <description>Synchronized primary lab node with remote mirror. 142 files verified.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/logs/log-2026-01-29-01/</link>
+      <pubDate>Thu, 29 Jan 2026 21:45:12 +0000</pubDate>
+      <guid>http://localhost:1313/logs/log-2026-01-29-01/</guid>
+      <description>Kernel update detected across local partition. Re-indexing metadata.</description>
+    </item>
     <item>
       <title>Recent Website Enhancements: Lab Console, Search, and Man Pages</title>
-      <link>https://mickgeeklabs.org/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</link>
+      <link>http://localhost:1313/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</link>
       <pubDate>Tue, 27 Jan 2026 14:45:54 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</guid>
+      <guid>http://localhost:1313/blog/2026-01-27-recent-website-enhancements-lab-console-search-and-man-pages/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Over the last few days, I&amp;rsquo;ve been focusing on bringing a more &amp;ldquo;Industrial Lab&amp;rdquo; and terminal-centric feel to the MickTheLinuxGeek website. This dev log summarizes the last three major updates merged into the codebase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-dynamic-lab-console--custom-404-page-pr-3&#34;&gt;1. Dynamic Lab Console &amp;amp; Custom 404 Page (PR #3)&lt;/h2&gt;&#xA;&lt;p&gt;The first major update introduced a dynamic &lt;strong&gt;Lab Console&lt;/strong&gt; component. This component is designed to emulate a terminal-like interface directly on the home page, providing an interactive feel from the moment a visitor arrives.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DITS Development Update: Keyboard Navigation, Drag-and-Drop, and Improved Testing</title>
-      <link>https://mickgeeklabs.org/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</link>
+      <link>http://localhost:1313/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</link>
       <pubDate>Sat, 24 Jan 2026 21:12:15 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</guid>
+      <guid>http://localhost:1313/blog/2026-01-24-dits-development-update-keyboard-navigation-drag-and-drop-and-improved-testing/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a busy few weeks for the Developer Issue Tracking System (DITS). We&amp;rsquo;ve hit several major milestones that significantly improve both the user experience and the long-term maintainability of the project. Here&amp;rsquo;s a look at what&amp;rsquo;s been happening in the last six pull requests.&lt;/p&gt;&#xA;&lt;h2 id=&#34;keyboard-first-navigation&#34;&gt;Keyboard-First Navigation&lt;/h2&gt;&#xA;&lt;p&gt;For power users, efficiency is everything. We&amp;rsquo;ve just completed a major push for keyboard command navigation. You can now navigate through issues and board views with ease, reducing reliance on the mouse and keeping you in the &amp;ldquo;flow&amp;rdquo; state. This completes a comprehensive set of keyboard commands designed to make DITS feel more like a high-performance terminal.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rebooting for 2026: Tracking Issues and Breaking New Ground</title>
-      <link>https://mickgeeklabs.org/blog/happy-new-year-2026/</link>
+      <link>http://localhost:1313/blog/happy-new-year-2026/</link>
       <pubDate>Thu, 01 Jan 2026 16:56:05 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/happy-new-year-2026/</guid>
+      <guid>http://localhost:1313/blog/happy-new-year-2026/</guid>
       <description>&lt;h2 id=&#34;happy-new-year--2026&#34;&gt;Happy New Year &amp;ndash; 2026&lt;/h2&gt;&#xA;&lt;p&gt;Happy New Year! It has been a while since I last posted. I have been busy working on the DITS issue tracker application.&lt;/p&gt;&#xA;&lt;p&gt;I am currently finishing the last groups of development tasks for the web application. After that, I have a list of things I need to go back and add or complete. I am hoping to have this work done by the end of January; then, it will be time for testing and fixing issues. I am looking forward to getting back to it, as I have taken a little break to work on some other things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DITS Origin</title>
-      <link>https://mickgeeklabs.org/blog/dits-origin/</link>
+      <link>http://localhost:1313/blog/dits-origin/</link>
       <pubDate>Sun, 16 Nov 2025 14:47:42 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/dits-origin/</guid>
+      <guid>http://localhost:1313/blog/dits-origin/</guid>
       <description>&lt;p&gt;One day awhile back, I was working on developing a blog application using Python and Django.  I came to a point where I needed to keep track of bugs, issues, and&#xA;items that needed research.  How was I going to do this?  I could use GitHub issues, as I keep the project in a repository.  That would work fine, but I would have to&#xA;keep switching context from my IDE to GitHub issues.  Eventually I would need to start tracking issues on GitHub, but I felt where I was at in the development process,&#xA;that was not the way I wanted to go.  So, what I ended up doing was creating a project.its file and dumped issues and whatever else that needed researched into&#xA;it.  Although this worked, the file ended up being an unformatted mess and difficult to track issues, especially if there were a lot.  What was I going to do?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website Deployed</title>
-      <link>https://mickgeeklabs.org/blog/website-deployed/</link>
+      <link>http://localhost:1313/blog/website-deployed/</link>
       <pubDate>Sat, 08 Nov 2025 20:04:54 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/website-deployed/</guid>
+      <guid>http://localhost:1313/blog/website-deployed/</guid>
       <description>&lt;p&gt;Website deployed!  I finally have my own website; My own space on the web.  For the last few years, I have wanted to build a website to showcase&#xA;the projects I am working on, and have a place to blog.  Like I said in my first post, I tried to use Hugo to build a website before, but always&#xA;struggled with the templates and how all files fit together.  I tried a couple different times, and I still have the GitHub repositories from those&#xA;attempts.  I tried to modify one of Hugo&amp;rsquo;s templates to fit my use case, but could not achieve something I liked, and starting from a blank canvas&#xA;was not going to work either, as I am not that creative with these kinds of things.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Developer Issue Tracking Scheme -- DITS</title>
-      <link>https://mickgeeklabs.org/projects/dits/</link>
+      <link>http://localhost:1313/projects/dits/</link>
       <pubDate>Tue, 04 Nov 2025 10:43:22 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/projects/dits/</guid>
+      <guid>http://localhost:1313/projects/dits/</guid>
       <description>&lt;p&gt;DITS (Developer Issue Tracking System) is a purpose-built issue tracker designed exclusively for individual software developers. It eliminates the &amp;ldquo;collaboration tax&amp;rdquo; of&#xA;team-oriented tools by providing friction-less issue capture, sub-100ms interactions, and deep bidirectional Git integration, offering a keyboard-first,&#xA;flow-state-optimized experience across web, desktop, mobile, and IDE platforms while ensuring complete data portability and user ownership.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating A Website</title>
-      <link>https://mickgeeklabs.org/blog/my-first-blog-post/</link>
+      <link>http://localhost:1313/blog/my-first-blog-post/</link>
       <pubDate>Tue, 04 Nov 2025 09:09:30 -0500</pubDate>
-      <guid>https://mickgeeklabs.org/blog/my-first-blog-post/</guid>
+      <guid>http://localhost:1313/blog/my-first-blog-post/</guid>
       <description>&lt;p&gt;Well here it is.  I finally built my first website, my own place on the internet.&#xA;I have always wanted to build a blog and post interesting stuff, but could never find a good way to accomplish this.  I have tried building Hugo sites before, but&#xA;it never worked out.  I tried using one of Hugo&amp;rsquo;s themes, but trying to modify one of those to suit my needs turned into a nightmare.  Well, here I am again using&#xA;Hugo to build a website and a blog, this time with the help of AI.  Starting from a blank slate or trying to use one of Hugo&amp;rsquo;s themes just didn&amp;rsquo;t work for me.  If I&#xA;can get something I like to start with, then I have no problem taking off from there.  What I have so far looks good and I like it.  This is a work in progress and I&amp;rsquo;ll&#xA;be making changes as I go along.  I&amp;rsquo;ll see how it goes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MICK(1)</title>
-      <link>https://mickgeeklabs.org/man/</link>
+      <link>http://localhost:1313/man/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mickgeeklabs.org/man/</guid>
+      <guid>http://localhost:1313/man/</guid>
       <description>&lt;h2 id=&#34;name&#34;&gt;NAME&lt;/h2&gt;&#xA;&lt;p&gt;mickgeeklabs - personal portal and technical lab logs of Michael Biel&lt;/p&gt;&#xA;&lt;h2 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; [&amp;ndash;about] [&amp;ndash;projects] [&amp;ndash;feed] [&amp;ndash;search]&lt;/p&gt;&#xA;&lt;h2 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;mickgeeklabs&lt;/strong&gt; is a custom-built static site designed to simulate an industrial laboratory console. It serves as a central hub for documenting engineering projects, infrastructure automation, and home lab research.&lt;/p&gt;&#xA;&lt;p&gt;The interface utilizes a low-light, high-contrast palette optimized for technical deep-dives and late-night tinkering.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PROCESS_MONITOR</title>
-      <link>https://mickgeeklabs.org/now/</link>
+      <link>http://localhost:1313/now/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mickgeeklabs.org/now/</guid>
+      <guid>http://localhost:1313/now/</guid>
       <description></description>
     </item>
     <item>
       <title>RSS Feeds</title>
-      <link>https://mickgeeklabs.org/rss/</link>
+      <link>http://localhost:1313/rss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mickgeeklabs.org/rss/</guid>
+      <guid>http://localhost:1313/rss/</guid>
       <description>&lt;p&gt;Subscribe to updates from MickGeekLabs using RSS feeds.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Search</title>
-      <link>https://mickgeeklabs.org/search/</link>
+      <link>http://localhost:1313/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mickgeeklabs.org/search/</guid>
+      <guid>http://localhost:1313/search/</guid>
       <description></description>
     </item>
   </channel>

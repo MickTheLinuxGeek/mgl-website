@@ -47,6 +47,10 @@ pluralizeListTitles = false
     url = "/now/"
     weight = 65
   [[menu.main]]
+    name = "Activity"
+    url = "/logs/"
+    weight = 68
+  [[menu.main]]
     name = "Search"
     url = "/search/"
     weight = 70

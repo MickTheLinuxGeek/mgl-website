@@ -1,6 +1,6 @@
 +++
 date = '2026-01-31T16:53:11-05:00'
-draft = true
+draft = false
 title = 'Homelab reorganization 2026'
 tech = ['Homelab', 'MickGeekLabs', 'jellyfin', 'NAS']
 +++

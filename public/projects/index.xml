@@ -6,8 +6,15 @@
     <description>Recent content in Projects on &lt;MickGeekLabs/&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Nov 2025 10:43:22 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 31 Jan 2026 16:53:11 -0500</lastBuildDate>
     <atom:link href="https://mickgeeklabs.org/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab reorganization 2026</title>
+      <link>https://mickgeeklabs.org/projects/homelab_reorganization_2026/</link>
+      <pubDate>Sat, 31 Jan 2026 16:53:11 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/projects/homelab_reorganization_2026/</guid>
+      <description>&lt;p&gt;This is the initial phase of the 2026 homelab reorganization at MickGeekLabs.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Phase 1:&lt;/strong&gt; Migrate the Jellyfin server from an HP Elitedesk 800 G3 SFF to an HP Prodesk 600 G4 mini equipped with a USB-C DAS.&#xA;&lt;strong&gt;Phase 2:&lt;/strong&gt; Deploy a Ugreen NASync DXP4800 Plus 4-bay NAS as the primary services server.&#xA;&lt;strong&gt;Phase 3:&lt;/strong&gt; Repurpose the DXP2800 2-bay NAS (the current services server) for a new specialized role.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Developer Issue Tracking Scheme -- DITS</title>
       <link>https://mickgeeklabs.org/projects/dits/</link>

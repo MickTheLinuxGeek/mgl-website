@@ -16,6 +16,13 @@
       <description>Added homelab project to site&amp;rsquo;s project section</description>
     </item>
     <item>
+      <title>Homelab reorganization 2026</title>
+      <link>https://mickgeeklabs.org/projects/homelab_reorganization_2026/</link>
+      <pubDate>Sat, 31 Jan 2026 16:53:11 -0500</pubDate>
+      <guid>https://mickgeeklabs.org/projects/homelab_reorganization_2026/</guid>
+      <description>&lt;p&gt;This is the initial phase of the 2026 homelab reorganization at MickGeekLabs.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Phase 1:&lt;/strong&gt; Migrate the Jellyfin server from an HP Elitedesk 800 G3 SFF to an HP Prodesk 600 G4 mini equipped with a USB-C DAS.&#xA;&lt;strong&gt;Phase 2:&lt;/strong&gt; Deploy a Ugreen NASync DXP4800 Plus 4-bay NAS as the primary services server.&#xA;&lt;strong&gt;Phase 3:&lt;/strong&gt; Repurpose the DXP2800 2-bay NAS (the current services server) for a new specialized role.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title></title>
       <link>https://mickgeeklabs.org/logs/log-2026-01-31-160850/</link>
       <pubDate>Sat, 31 Jan 2026 16:08:50 -0500</pubDate>

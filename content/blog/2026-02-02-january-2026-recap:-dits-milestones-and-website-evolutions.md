@@ -1,6 +1,6 @@
 +++
 date = '2026-02-02T13:44:29-05:00'
-draft = true
+draft = false
 title = 'January 2026 Recap: DITS Milestones and Website Evolutions'
 categories = ['Dev Log', 'Monthly Recap']
 tags = ['DITS', 'DITS Development', 'Hugo', 'WebDev', 'BuildInPublic']
